@@ -4,85 +4,148 @@
 <meta charset="UTF-8">
 <title>Power Tec | iPhones Premium</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
+:root {
+    --preto: #0b0b0b;
+    --cinza-escuro: #1c1c1c;
+    --cinza: #666;
+    --cinza-claro: #f2f2f2;
+    --branco: #ffffff;
+    --laranja: #ff7a00;
+    --verde: #2ecc71;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--cinza-claro);
+    color: var(--cinza-escuro);
+}
+
+/* HEADER */
 header {
-    background: #000;
-    color: #fff;
-    padding: 20px;
+    background: linear-gradient(180deg, #000, #111);
+    color: var(--branco);
+    padding: 70px 20px;
     text-align: center;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
 header p {
-    margin: 5px 0;
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 14px;
+    border: 1px solid var(--laranja);
+    color: var(--laranja);
+    border-radius: 20px;
+    font-size: 14px;
 }
 
 .whatsapp {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 18px;
-    background: #25d366;
-    color: #fff;
+    margin-top: 30px;
+    padding: 14px 34px;
+    background: var(--laranja);
+    color: var(--branco);
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: opacity .2s;
 }
 
+.whatsapp:hover {
+    opacity: 0.9;
+}
+
+/* CONTAINER */
 .container {
-    width: 95%;
     max-width: 1200px;
     margin: auto;
-    padding: 20px 0;
+    padding: 70px 20px;
 }
 
-h2 {
+/* TITULOS */
+.section-title {
     text-align: center;
-    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background: #fff;
+.section-title h2 {
+    font-size: 30px;
+    margin: 0;
 }
 
-th, td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+.section-title span {
+    color: var(--laranja);
 }
 
-th {
-    background: #222;
-    color: #fff;
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
 }
 
-.preco-vista {
-    background: #2ecc71;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 6px;
-    padding: 6px;
+/* CARD */
+.card {
+    background: var(--branco);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    transition: transform .25s;
 }
 
-.preco-parcelado {
-    background: rgba(200,200,200,0.5);
-    border-radius: 6px;
-    padding: 6px;
+.card:hover {
+    transform: translateY(-6px);
 }
 
+.card h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card .status {
+    font-size: 13px;
+    color: var(--cinza);
+    margin-bottom: 15px;
+}
+
+.preco {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--verde);
+}
+
+.parcelado {
+    margin-top: 6px;
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+/* FOOTER */
 footer {
-    background: #000;
-    color: #fff;
+    background: var(--preto);
+    color: #aaa;
     text-align: center;
-    padding: 15px;
-    margin-top: 40px;
+    padding: 30px;
+    font-size: 14px;
 }
 </style>
 </head>
@@ -91,140 +154,66 @@ footer {
 
 <header>
     <h1>Power Tec</h1>
-    <p>Original • Elegante • Confiável</p>
-    <p>🛡️ Garantia de 1 ano</p>
+    <p>iPhones originais com procedência garantida</p>
+    <div class="badge">🛡️ Garantia de 1 ano</div><br>
     <a class="whatsapp" href="https://wa.me/5521967296969" target="_blank">
-        📲 Falar no WhatsApp
+        Falar no WhatsApp
     </a>
 </header>
 
 <div class="container">
 
-<h2>📦 iPhones Lacrados</h2>
+<div class="section-title">
+    <h2><span>iPhones</span> Lacrados</h2>
+</div>
 
-<table>
-<tr>
-<th>Modelo</th>
-<th>À Vista</th>
-<th>10x</th>
-<th>12x</th>
-</tr>
+<div class="grid">
+    <div class="card">
+        <h3>iPhone 13 • 128GB</h3>
+        <div class="status">Novo • Lacrado</div>
+        <div class="preco">R$ 3.390</div>
+        <div class="parcelado">12x de R$ 328,64</div>
+    </div>
 
-<tr>
-<td>iPhone 13 128GB</td>
-<td class="preco-vista">R$ 3.390</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 328,64</td>
-</tr>
+    <div class="card">
+        <h3>iPhone 14 • 128GB</h3>
+        <div class="status">Novo • Lacrado</div>
+        <div class="preco">R$ 3.890</div>
+        <div class="parcelado">12x de R$ 375,75</div>
+    </div>
 
-<tr>
-<td>iPhone 14 128GB</td>
-<td class="preco-vista">R$ 3.890</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 375,75</td>
-</tr>
+    <div class="card">
+        <h3>iPhone 15 • 128GB</h3>
+        <div class="status">Novo • Lacrado</div>
+        <div class="preco">R$ 4.290</div>
+        <div class="parcelado">12x de R$ 413,39</div>
+    </div>
+</div>
 
-<tr>
-<td>iPhone 15 128GB</td>
-<td class="preco-vista">R$ 4.290</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 413,39</td>
-</tr>
+<div class="section-title" style="margin-top:90px">
+    <h2><span>iPhones</span> Seminovos</h2>
+</div>
 
-<tr>
-<td>iPhone 16 128GB</td>
-<td class="preco-vista">R$ 5.090</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 484,39</td>
-</tr>
+<div class="grid">
+    <div class="card">
+        <h3>iPhone 11 • 64GB</h3>
+        <div class="status">Seminovo • Revisado</div>
+        <div class="preco">R$ 1.490</div>
+        <div class="parcelado">12x de R$ 149,73</div>
+    </div>
 
-<tr>
-<td>iPhone 16 256GB</td>
-<td class="preco-vista">R$ 5.790</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 554,64</td>
-</tr>
-
-<tr>
-<td>iPhone 17 256GB</td>
-<td class="preco-vista">R$ 6.890</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 652,40</td>
-</tr>
-
-<tr>
-<td>iPhone 17 Pro 256GB</td>
-<td class="preco-vista">R$ 8.590</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 818,31</td>
-</tr>
-
-<tr>
-<td>iPhone 17 Pro Max 256GB</td>
-<td class="preco-vista">R$ 9.790</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 931,31</td>
-</tr>
-</table>
-
-<h2>♻️ iPhones Seminovos</h2>
-
-<table>
-<tr>
-<th>Modelo</th>
-<th>À Vista</th>
-<th>10x</th>
-<th>12x</th>
-</tr>
-
-<tr>
-<td>iPhone 11 64GB</td>
-<td class="preco-vista">R$ 1.490</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 149,73</td>
-</tr>
-
-<tr>
-<td>iPhone 12 128GB</td>
-<td class="preco-vista">R$ 2.190</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 215,64</td>
-</tr>
-
-<tr>
-<td>iPhone 13 Pro 256GB</td>
-<td class="preco-vista">R$ 3.390</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 328,64</td>
-</tr>
-
-<tr>
-<td>iPhone 14 Pro Max 256GB</td>
-<td class="preco-vista">R$ 4.590</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 441,64</td>
-</tr>
-
-<tr>
-<td>iPhone 15 Pro Max 512GB</td>
-<td class="preco-vista">R$ 5.590</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 535,81</td>
-</tr>
-
-<tr>
-<td>iPhone 16 Pro Max 512GB</td>
-<td class="preco-vista">R$ 6.990</td>
-<td class="preco-parcelado">—</td>
-<td class="preco-parcelado">R$ 667,64</td>
-</tr>
-
-</table>
+    <div class="card">
+        <h3>iPhone 12 • 128GB</h3>
+        <div class="status">Seminovo • Revisado</div>
+        <div class="preco">R$ 2.190</div>
+        <div class="parcelado">12x de R$ 215,64</div>
+    </div>
+</div>
 
 </div>
 
 <footer>
-<p>© 2026 Power Tec • Todos os direitos reservados</p>
+© 2026 Power Tec • Tecnologia com elegância
 </footer>
 
 </body>
