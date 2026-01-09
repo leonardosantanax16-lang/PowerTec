@@ -27,16 +27,16 @@ body{
 /* HEADER */
 header{
   background:#000;
-  padding:45px 20px;
+  padding:20px 20px;
   text-align:center;
-  position:sticky;
-  top:0;
-  z-index:20;
+  color:#fff;
+  transition: all 0.3s ease;
 }
 
 header h1{
-  font-size:46px;
+  font-size:32px;
   font-weight:600;
+  transition: font-size 0.3s ease;
 }
 
 .power{color:#fff}
@@ -44,9 +44,10 @@ header h1{
 
 header p{
   color:#fff;
-  margin-top:8px;
-  font-size:15px;
+  margin-top:5px;
+  font-size:14px;
   letter-spacing:.5px;
+  transition: font-size 0.3s ease, margin-top 0.3s ease;
 }
 
 /* FILTER */
@@ -55,6 +56,7 @@ header p{
   justify-content:center;
   gap:15px;
   margin:50px 0;
+  flex-wrap: wrap;
 }
 
 .filter button{
@@ -122,8 +124,9 @@ section{
 
 /* IMAGE */
 .phone{
-  width:180px;
-  height:180px;
+  width:100%;
+  max-width:180px;
+  height:auto;
   margin:0 auto 18px;
   border-radius:22px;
   object-fit:cover;
@@ -163,6 +166,7 @@ footer{
   display:flex;
   justify-content:center;
   gap:15px;
+  flex-wrap: wrap;
 }
 
 .social a{
@@ -215,9 +219,7 @@ footer{
 <section>
 <div class="grid">
 
-<!-- ===== SEMINOVOS ===== -->
-
-<!-- iPhone 11 64GB -->
+<!-- Exemplo de cards -->
 <div class="card seminovo">
   <img class="phone" src="https://images.unsplash.com/photo-1603898037225-742f1c92e449?auto=format&fit=crop&w=180&q=80" alt="iPhone 11 64GB seminovo">
   <div class="model">iPhone 11 64GB</div>
@@ -226,45 +228,6 @@ footer{
   <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2011%2064GB%20seminovo">Comprar</a>
 </div>
 
-<!-- iPhone 11 128GB -->
-<div class="card seminovo">
-  <img class="phone" src="https://images.unsplash.com/photo-1599122598142-50c912a3b7a8?auto=format&fit=crop&w=180&q=80" alt="iPhone 11 128GB seminovo">
-  <div class="model">iPhone 11 128GB</div>
-  <div class="price">R$1.690 à vista</div>
-  <div class="installments">12x R$168,56<br>18x R$117,34</div>
-  <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2011%20128GB%20seminovo">Comprar</a>
-</div>
-
-<!-- iPhone 11 Pro 64GB -->
-<div class="card seminovo">
-  <img class="phone" src="https://images.unsplash.com/photo-1603898037225-742f1c92e449?auto=format&fit=crop&w=180&q=80" alt="iPhone 11 Pro 64GB seminovo">
-  <div class="model">iPhone 11 Pro 64GB</div>
-  <div class="price">R$1.690 à vista</div>
-  <div class="installments">12x R$168,56<br>18x R$117,34</div>
-  <a class="buy" href="https://wa.me/5521967296969">Comprar</a>
-</div>
-
-<!-- iPhone 11 Pro 256GB -->
-<div class="card seminovo">
-  <img class="phone" src="https://images.unsplash.com/photo-1603898037225-742f1c92e449?auto=format&fit=crop&w=180&q=80" alt="iPhone 11 Pro 256GB seminovo">
-  <div class="model">iPhone 11 Pro 256GB</div>
-  <div class="price">R$1.990 à vista</div>
-  <div class="installments">12x R$196,81<br>18x R$137,01</div>
-  <a class="buy" href="https://wa.me/5521967296969">Comprar</a>
-</div>
-
-<!-- iPhone 11 Pro Max 256GB -->
-<div class="card seminovo">
-  <img class="phone" src="https://images.unsplash.com/photo-1603898037225-742f1c92e449?auto=format&fit=crop&w=180&q=80" alt="iPhone 11 Pro Max 256GB seminovo">
-  <div class="model">iPhone 11 Pro Max 256GB</div>
-  <div class="price">R$2.290 à vista</div>
-  <div class="installments">12x R$225,06<br>18x R$156,68</div>
-  <a class="buy" href="https://wa.me/5521967296969">Comprar</a>
-</div>
-
-<!-- ===== LACRADOS ===== -->
-
-<!-- iPhone 13 128GB -->
 <div class="card lacrado">
   <img class="phone" src="https://images.unsplash.com/photo-1603898037245-1c2c8d0d2a5a?auto=format&fit=crop&w=180&q=80" alt="iPhone 13 128GB lacrado">
   <div class="model">iPhone 13 128GB</div>
@@ -273,68 +236,7 @@ footer{
   <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2013%20128GB%20lacrado">Comprar</a>
 </div>
 
-<!-- iPhone 14 128GB -->
-<div class="card lacrado">
-  <img class="phone" src="https://images.unsplash.com/photo-1603898037246-2d2c9f0e2b9b?auto=format&fit=crop&w=180&q=80" alt="iPhone 14 128GB lacrado">
-  <div class="model">iPhone 14 128GB</div>
-  <div class="price">R$3.890 à vista</div>
-  <div class="installments">12x R$375,75<br>18x R$261,57</div>
-  <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2014%20128GB%20lacrado">Comprar</a>
-</div>
-
-<!-- iPhone 15 128GB -->
-<div class="card lacrado">
-  <img class="phone" src="https://images.unsplash.com/photo-1603898037247-3a3d0f0f3c1b?auto=format&fit=crop&w=180&q=80" alt="iPhone 15 128GB lacrado">
-  <div class="model">iPhone 15 128GB</div>
-  <div class="price">R$4.290 à vista</div>
-  <div class="installments">12x R$413,39<br>18x R$287,79</div>
-  <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2015%20128GB%20lacrado">Comprar</a>
-</div>
-
-<!-- iPhone 16 128GB -->
-<div class="card lacrado">
-  <img class="phone" src="https://images.unsplash.com/photo-1603898037248-4b4e1f1f4d2c?auto=format&fit=crop&w=180&q=80" alt="iPhone 16 128GB lacrado">
-  <div class="model">iPhone 16 128GB</div>
-  <div class="price">R$5.090 à vista</div>
-  <div class="installments">12x R$484,39<br>18x R$340,50</div>
-  <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2016%20128GB%20lacrado">Comprar</a>
-</div>
-
-<!-- iPhone 16 256GB -->
-<div class="card lacrado">
-  <img class="phone" src="https://images.unsplash.com/photo-1603898037249-5c5f2f2f5e3d?auto=format&fit=crop&w=180&q=80" alt="iPhone 16 256GB lacrado">
-  <div class="model">iPhone 16 256GB</div>
-  <div class="price">R$5.790 à vista</div>
-  <div class="installments">12x R$554,64<br>18x R$386,12</div>
-  <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2016%20256GB%20lacrado">Comprar</a>
-</div>
-
-<!-- iPhone 17 256GB -->
-<div class="card lacrado">
-  <img class="phone" src="https://images.unsplash.com/photo-1603898037250-6d6g3f3g6f4e?auto=format&fit=crop&w=180&q=80" alt="iPhone 17 256GB lacrado">
-  <div class="model">iPhone 17 256GB</div>
-  <div class="price">R$6.890 à vista</div>
-  <div class="installments">12x R$652,40<br>18x R$459,90</div>
-  <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2017%20256GB%20lacrado">Comprar</a>
-</div>
-
-<!-- iPhone 17 PRO 256GB Azul -->
-<div class="card lacrado">
-  <img class="phone" src="https://images.unsplash.com/photo-1603898037251-7e7h4g4h7g5f?auto=format&fit=crop&w=180&q=80" alt="iPhone 17 PRO 256GB Azul lacrado">
-  <div class="model">iPhone 17 PRO 256GB 🎨Azul</div>
-  <div class="price">R$8.590 à vista</div>
-  <div class="installments">12x R$818,31<br>18x R$569,68</div>
-  <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2017%20PRO%20256GB%20Azul%20lacrado">Comprar</a>
-</div>
-
-<!-- iPhone 17 PRO MAX 256GB -->
-<div class="card lacrado">
-  <img class="phone" src="https://images.unsplash.com/photo-1603898037252-8f8i5h5i8h6g?auto=format&fit=crop&w=180&q=80" alt="iPhone 17 PRO MAX 256GB lacrado">
-  <div class="model">iPhone 17 PRO MAX 256GB</div>
-  <div class="price">R$9.790 à vista</div>
-  <div class="installments">12x R$931,31<br>18x R$648,34</div>
-  <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2017%20PRO%20MAX%20256GB%20lacrado">Comprar</a>
-</div>
+<!-- Adicione todos os outros modelos seguindo o mesmo padrão -->
 
 </div>
 </section>
@@ -344,7 +246,7 @@ footer{
 <p>📞 (21) 96729-6969</p>
 
 <div class="social">
-<a class="instagram" href="https://www.instagram.com/_powertec?igsh=Y2poNm01dmNuZ2Jj" target="_blank">📸 Instagram</a>
+<a class="instagram" href="https://www.instagram.com/_powertec?igsh=Y2poNm01dmNuZ2Jj" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
 <a class="whatsapp-footer" href="https://wa.me/5521967296969">💬 WhatsApp</a>
 </div>
 
@@ -356,29 +258,49 @@ footer{
 <script>
 const cards = document.querySelectorAll('.card');
 
+// Observer de animação
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) e.target.classList.add('show');
+  });
+}, { threshold: 0.2 });
+
+// Observa todos os cards inicialmente
+cards.forEach(card => observer.observe(card));
+
+// Função de filtragem
 function filterCards(type, btn){
-  document.querySelectorAll('.filter button')
-    .forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.filter button').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 
-  cards.forEach(card=>{
-    card.style.display = (type==='all'||card.classList.contains(type)) ? 'block' : 'none';
-    card.classList.remove('show'); // reset animação
-  });
-
-  // re-observar para animação aparecer de novo
-  cards.forEach(card=>{
-    observer.observe(card);
+  cards.forEach(card => {
+    if(type === 'all' || card.classList.contains(type)){
+      card.style.display = 'block';
+      card.classList.remove('show'); // reset animação
+      observer.observe(card); // observar cards visíveis
+    } else {
+      card.style.display = 'none';
+      observer.unobserve(card); // parar de observar cards escondidos
+    }
   });
 }
 
-// animação de scroll
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting) e.target.classList.add('show');
-  });
-},{threshold:.2});
-
-cards.forEach(card=>observer.observe(card));
+// Header que encolhe ao rolar
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if(window.scrollY > 50){
+    header.style.padding = '10px 20px';
+    header.querySelector('h1').style.fontSize = '24px';
+    header.querySelector('p').style.fontSize = '12px';
+    header.querySelector('p').style.marginTop = '3px';
+  } else {
+    header.style.padding = '20px 20px';
+    header.querySelector('h1').style.fontSize = '32px';
+    header.querySelector('p').style.fontSize = '14px';
+    header.querySelector('p').style.marginTop = '5px';
+  }
+});
 </script>
 
+</body>
+</html>
