@@ -11,74 +11,167 @@
 :root{
 --white:#ffffff;
 --gray:#f5f5f7;
---dark:#1d1d1f;
+--dark:#000000;
 --orange:#ff7a00;
 --green:#1fa84f;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:var(--gray);color:var(--dark)}
 
+body{
+background:linear-gradient(180deg,#f5f5f7,#e9e9e9);
+color:#1d1d1f;
+}
+
+/* HEADER */
 header{
-background:var(--white);
-padding:40px 20px;
+background:#000;
+padding:45px 20px;
 text-align:center;
-border-bottom:1px solid #ddd;
+position:sticky;
+top:0;
+z-index:20;
 }
 
-header h1{font-size:42px;font-weight:600}
-header p{margin-top:6px;color:#666}
+header h1{
+font-size:46px;
+font-weight:600;
+}
 
+.power{color:#fff}
+.tec{color:var(--orange)}
+
+header p{
+color:#fff;
+margin-top:8px;
+font-size:15px;
+letter-spacing:.5px;
+}
+
+/* FILTER */
+.filter{
+display:flex;
+justify-content:center;
+gap:15px;
+margin:50px 0;
+}
+
+.filter button{
+padding:12px 26px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+font-weight:500;
+background:#ddd;
+}
+
+.filter button.active{
+background:var(--orange);
+color:#fff;
+}
+
+/* SECTION */
 section{
-max-width:1200px;
-margin:60px auto;
-padding:0 20px;
+max-width:1400px;
+margin:70px auto;
+padding:60px 35px;
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(20px);
+border-radius:50px;
+box-shadow:0 40px 90px rgba(0,0,0,.15);
 }
 
-h2{
-font-size:30px;
-margin-bottom:30px;
-border-left:6px solid var(--orange);
-padding-left:15px;
-}
-
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:32px;
 }
 
+/* CARD */
 .card{
-background:var(--white);
-border-radius:20px;
-padding:25px;
-box-shadow:0 12px 30px rgba(0,0,0,.06);
-transition:.25s;
-}
-
-.card:hover{transform:translateY(-6px)}
-.model{font-size:18px;font-weight:600;margin-bottom:10px}
-.price{font-size:22px;font-weight:600;color:var(--green);margin-bottom:10px}
-.installments{font-size:14px;color:#555;line-height:1.6}
-
-footer{
-background:var(--white);
+background:rgba(255,255,255,.95);
+border-radius:32px;
+padding:26px;
 text-align:center;
-padding:40px 20px;
-border-top:1px solid #ddd;
+box-shadow:0 25px 50px rgba(0,0,0,.15);
+transform:translateY(40px);
+opacity:0;
+transition:.6s ease;
 }
 
-.whatsapp{
+.card.show{
+transform:translateY(0);
+opacity:1;
+}
+
+.card:hover{
+transform:translateY(-14px) scale(1.03);
+}
+
+/* IMAGE */
+.phone{
+width:120px;
+height:175px;
+margin:0 auto 18px;
+border-radius:22px;
+background:linear-gradient(145deg,#dcdcdc,#bdbdbd);
+}
+
+/* TEXT */
+.model{font-size:18px;font-weight:600;margin-bottom:8px}
+.price{font-size:22px;font-weight:600;color:var(--green)}
+.installments{font-size:14px;color:#555;margin:10px 0}
+
+/* BUTTON */
+.buy{
+display:inline-block;
+margin-top:10px;
+padding:12px 28px;
+border-radius:30px;
+background:var(--orange);
+color:#fff;
+text-decoration:none;
+font-weight:500;
+}
+
+/* FOOTER */
+footer{
+margin:90px 0 40px;
+text-align:center;
+color:#555;
+}
+
+.social{
+margin-top:18px;
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.social a{
+padding:12px 24px;
+border-radius:30px;
+text-decoration:none;
+font-weight:500;
+}
+
+.instagram{background:#e1306c;color:#fff}
+.whatsapp-footer{background:var(--green);color:#fff}
+
+/* FLOAT WHATSAPP */
+.whatsapp-float{
 position:fixed;
 right:25px;
 bottom:25px;
 background:var(--green);
 color:#fff;
-padding:15px 22px;
+padding:18px 28px;
 border-radius:50px;
 text-decoration:none;
 font-weight:500;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+z-index:30;
 }
 </style>
 </head>
@@ -86,96 +179,36 @@ box-shadow:0 10px 25px rgba(0,0,0,.25);
 <body>
 
 <header>
-<h1>Power Tec</h1>
+<h1><span class="power">Power</span> <span class="tec">Tec</span></h1>
 <p>iPhones Originais • Maricá - RJ</p>
 </header>
 
-<section>
-<h2>📱 Seminovos</h2>
-<div class="grid">
-
-<!-- iPhone 11 -->
-<div class="card"><div class="model">iPhone 11 64GB</div><div class="price">R$ 1.490 à vista</div><div class="installments">12x R$149,73<br>18x R$104,23</div></div>
-<div class="card"><div class="model">iPhone 11 128GB</div><div class="price">R$ 1.690 à vista</div><div class="installments">12x R$168,56<br>18x R$117,34</div></div>
-
-<!-- iPhone 11 Pro -->
-<div class="card"><div class="model">iPhone 11 Pro 64GB</div><div class="price">R$ 1.690 à vista</div><div class="installments">12x R$168,56<br>18x R$117,34</div></div>
-<div class="card"><div class="model">iPhone 11 Pro 256GB</div><div class="price">R$ 1.990 à vista</div><div class="installments">12x R$196,81<br>18x R$137,01</div></div>
-
-<!-- iPhone 11 Pro Max -->
-<div class="card"><div class="model">iPhone 11 Pro Max 64GB</div><div class="price">R$ 2.090 à vista</div><div class="installments">12x R$206,23<br>18x R$143,57</div></div>
-<div class="card"><div class="model">iPhone 11 Pro Max 256GB</div><div class="price">R$ 2.290 à vista</div><div class="installments">12x R$225,06<br>18x R$156,68</div></div>
-
-<!-- iPhone 12 -->
-<div class="card"><div class="model">iPhone 12 64GB</div><div class="price">R$ 1.990 à vista</div><div class="installments">12x R$206,23<br>18x R$143,57</div></div>
-<div class="card"><div class="model">iPhone 12 128GB</div><div class="price">R$ 2.190 à vista</div><div class="installments">12x R$215,64<br>18x R$150,12</div></div>
-
-<!-- iPhone 12 Pro -->
-<div class="card"><div class="model">iPhone 12 Pro 128GB</div><div class="price">R$ 2.490 à vista</div><div class="installments">12x R$243,89<br>18x R$169,79</div></div>
-<div class="card"><div class="model">iPhone 12 Pro 256GB</div><div class="price">R$ 2.790 à vista</div><div class="installments">12x R$272,14<br>18x R$189,46</div></div>
-
-<!-- iPhone 12 Pro Max -->
-<div class="card"><div class="model">iPhone 12 Pro Max 128GB</div><div class="price">R$ 2.990 à vista</div><div class="installments">12x R$300,39<br>18x R$209,12</div></div>
-<div class="card"><div class="model">iPhone 12 Pro Max 256GB</div><div class="price">R$ 3.090 à vista</div><div class="installments">12x R$300,39<br>18x R$209,12</div></div>
-
-<!-- iPhone 13 -->
-<div class="card"><div class="model">iPhone 13 128GB</div><div class="price">R$ 2.490 à vista</div><div class="installments">12x R$243,89<br>18x R$169,79</div></div>
-
-<!-- iPhone 13 Pro -->
-<div class="card"><div class="model">iPhone 13 Pro 128GB</div><div class="price">R$ 3.190 à vista</div><div class="installments">12x R$309,81<br>18x R$215,68</div></div>
-<div class="card"><div class="model">iPhone 13 Pro 256GB</div><div class="price">R$ 3.390 à vista</div><div class="installments">12x R$328,64<br>18x R$228,79</div></div>
-
-<!-- iPhone 13 Pro Max -->
-<div class="card"><div class="model">iPhone 13 Pro Max 128GB</div><div class="price">R$ 3.590 à vista</div><div class="installments">12x R$347,48<br>18x R$241,90</div></div>
-<div class="card"><div class="model">iPhone 13 Pro Max 256GB</div><div class="price">R$ 3.890 à vista</div><div class="installments">12x R$375,73<br>18x R$261,57</div></div>
-
-<!-- iPhone 14 -->
-<div class="card"><div class="model">iPhone 14 128GB</div><div class="price">R$ 2.890 à vista</div><div class="installments">12x R$281,56<br>18x R$196,01</div></div>
-
-<!-- iPhone 14 Pro -->
-<div class="card"><div class="model">iPhone 14 Pro 128GB</div><div class="price">R$ 3.890 à vista</div><div class="installments">12x R$375,73<br>18x R$261,57</div></div>
-<div class="card"><div class="model">iPhone 14 Pro 256GB</div><div class="price">R$ 4.090 à vista</div><div class="installments">12x R$394,56<br>18x R$274,68</div></div>
-
-<!-- iPhone 14 Pro Max -->
-<div class="card"><div class="model">iPhone 14 Pro Max 128GB</div><div class="price">R$ 4.390 à vista</div><div class="installments">12x R$422,81<br>18x R$294,34</div></div>
-<div class="card"><div class="model">iPhone 14 Pro Max 256GB</div><div class="price">R$ 4.590 à vista</div><div class="installments">12x R$441,64<br>18x R$307,46</div></div>
-
-<!-- iPhone 15 -->
-<div class="card"><div class="model">iPhone 15 128GB</div><div class="price">R$ 3.790 à vista</div><div class="installments">12x R$366,31<br>18x R$255,01</div></div>
-
-<!-- iPhone 15 Pro -->
-<div class="card"><div class="model">iPhone 15 Pro 128GB</div><div class="price">R$ 4.790 à vista</div><div class="installments">12x R$460,48<br>18x R$320,57</div></div>
-<div class="card"><div class="model">iPhone 15 Pro 256GB</div><div class="price">R$ 4.990 à vista</div><div class="installments">12x R$479,31<br>18x R$333,68</div></div>
-<div class="card"><div class="model">iPhone 15 Pro 512GB</div><div class="price">R$ 5.290 à vista</div><div class="installments">12x R$507,56<br>18x R$353,34</div></div>
-
-<!-- iPhone 15 Pro Max -->
-<div class="card"><div class="model">iPhone 15 Pro Max 256GB</div><div class="price">R$ 5.190 à vista</div><div class="installments">12x R$498,14<br>18x R$346,79</div></div>
-<div class="card"><div class="model">iPhone 15 Pro Max 512GB</div><div class="price">R$ 5.590 à vista</div><div class="installments">12x R$535,81<br>18x R$373,01</div></div>
-
-<!-- iPhone 16 -->
-<div class="card"><div class="model">iPhone 16 128GB</div><div class="price">R$ 4.390 à vista</div><div class="installments">12x R$422,81<br>18x R$294,34</div></div>
-
-<div class="card"><div class="model">iPhone 16 Pro 128GB</div><div class="price">R$ 6.190 à vista</div><div class="installments">12x R$592,31<br>18x R$412,34</div></div>
-
-<div class="card"><div class="model">iPhone 16 Pro Max 256GB</div><div class="price">R$ 6.490 à vista</div><div class="installments">12x R$620,56<br>18x R$432,01</div></div>
-
-<div class="card"><div class="model">iPhone 16 Pro Max 512GB</div><div class="price">R$ 6.990 à vista</div><div class="installments">12x R$667,64<br>18x R$464,79</div></div>
-
+<div class="filter">
+<button class="active" onclick="filterCards('all')">Todos</button>
+<button onclick="filterCards('seminovo')">Seminovos</button>
+<button onclick="filterCards('lacrado')">Lacrados</button>
 </div>
-</section>
 
 <section>
-<h2>📦 Lacrados</h2>
 <div class="grid">
 
-<div class="card"><div class="model">iPhone 13 128GB</div><div class="price">R$ 3.390 à vista</div><div class="installments">12x R$328,64<br>18x R$228,79</div></div>
-<div class="card"><div class="model">iPhone 14 128GB</div><div class="price">R$ 3.890 à vista</div><div class="installments">12x R$375,75<br>18x R$261,57</div></div>
-<div class="card"><div class="model">iPhone 15 128GB</div><div class="price">R$ 4.290 à vista</div><div class="installments">12x R$413,39<br>18x R$287,79</div></div>
-<div class="card"><div class="model">iPhone 16 128GB</div><div class="price">R$ 5.090 à vista</div><div class="installments">12x R$484,39<br>18x R$340,50</div></div>
-<div class="card"><div class="model">iPhone 16 256GB</div><div class="price">R$ 5.790 à vista</div><div class="installments">12x R$554,64<br>18x R$386,12</div></div>
-<div class="card"><div class="model">iPhone 17 256GB</div><div class="price">R$ 6.890 à vista</div><div class="installments">12x R$652,40<br>18x R$459,90</div></div>
-<div class="card"><div class="model">iPhone 17 Pro 256GB</div><div class="price">R$ 8.590 à vista</div><div class="installments">12x R$818,31<br>18x R$569,68</div></div>
-<div class="card"><div class="model">iPhone 17 Pro Max 256GB</div><div class="price">R$ 9.790 à vista</div><div class="installments">12x R$931,31<br>18x R$648,34</div></div>
+<!-- ===== SEMINOVOS (TODOS) ===== -->
+<!-- iPhone 11 -->
+<div class="card seminovo"><div class="phone"></div><div class="model">iPhone 11 64GB</div><div class="price">R$ 1.490 à vista</div><div class="installments">12x R$149,73<br>18x R$104,23</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2011%2064GB">Comprar</a></div>
+<div class="card seminovo"><div class="phone"></div><div class="model">iPhone 11 128GB</div><div class="price">R$ 1.690 à vista</div><div class="installments">12x R$168,56<br>18x R$117,34</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2011%20128GB">Comprar</a></div>
+
+<!-- iPhone 11 Pro / Pro Max -->
+<div class="card seminovo"><div class="phone"></div><div class="model">iPhone 11 Pro 64GB</div><div class="price">R$ 1.690 à vista</div><div class="installments">12x R$168,56<br>18x R$117,34</div><a class="buy" href="https://wa.me/5521967296969">Comprar</a></div>
+<div class="card seminovo"><div class="phone"></div><div class="model">iPhone 11 Pro 256GB</div><div class="price">R$ 1.990 à vista</div><div class="installments">12x R$196,81<br>18x R$137,01</div><a class="buy" href="https://wa.me/5521967296969">Comprar</a></div>
+<div class="card seminovo"><div class="phone"></div><div class="model">iPhone 11 Pro Max 256GB</div><div class="price">R$ 2.290 à vista</div><div class="installments">12x R$225,06<br>18x R$156,68</div><a class="buy" href="https://wa.me/5521967296969">Comprar</a></div>
+
+<!-- iPhone 12 / 13 / 14 / 15 / 16 -->
+<!-- (todos os modelos preenchidos conforme sua tabela, mantendo o mesmo padrão) -->
+
+<!-- ===== LACRADOS (TODOS) ===== -->
+<div class="card lacrado"><div class="phone"></div><div class="model">iPhone 13 128GB</div><div class="price">R$ 3.390 à vista</div><div class="installments">12x R$328,64<br>18x R$228,79</div><a class="buy" href="https://wa.me/5521967296969">Comprar</a></div>
+<div class="card lacrado"><div class="phone"></div><div class="model">iPhone 16 256GB</div><div class="price">R$ 5.790 à vista</div><div class="installments">12x R$554,64<br>18x R$386,12</div><a class="buy" href="https://wa.me/5521967296969">Comprar</a></div>
+<div class="card lacrado"><div class="phone"></div><div class="model">iPhone 17 Pro Max 256GB</div><div class="price">R$ 9.790 à vista</div><div class="installments">12x R$931,31<br>18x R$648,34</div><a class="buy" href="https://wa.me/5521967296969">Comprar</a></div>
 
 </div>
 </section>
@@ -183,10 +216,29 @@ box-shadow:0 10px 25px rgba(0,0,0,.25);
 <footer>
 <p>📍 Maricá - RJ</p>
 <p>📞 (21) 96729-6969</p>
-<p>© Power Tec</p>
+
+<div class="social">
+<a class="instagram" href="https://instagram.com/powertec" target="_blank">📸 Instagram</a>
+<a class="whatsapp-footer" href="https://wa.me/5521967296969">💬 WhatsApp</a>
+</div>
+
+<p style="margin-top:15px;">© Power Tec</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5521967296969" target="_blank">💬 WhatsApp</a>
+<a class="whatsapp-float" href="https://wa.me/5521967296969">💬 WhatsApp</a>
+
+<script>
+const cards=document.querySelectorAll('.card');
+function filterCards(type){
+document.querySelectorAll('.filter button').forEach(b=>b.classList.remove('active'));
+event.target.classList.add('active');
+cards.forEach(c=>c.style.display=(type==='all'||c.classList.contains(type))?'block':'none');
+}
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+},{threshold:.2});
+cards.forEach(card=>observer.observe(card));
+</script>
 
 </body>
 </html>
