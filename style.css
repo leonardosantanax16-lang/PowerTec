@@ -88,7 +88,7 @@ header p{
 
 .cta-secondary i{
   font-size:22px;
-  color:var(--green);
+  color:var(--dark);
 }
 
 /* TRUST */
@@ -109,7 +109,7 @@ header p{
 }
 
 .trust div i{
-  color:var(--green);
+  color:var(--dark);
 }
 
 /* SECTIONS */
@@ -150,7 +150,7 @@ h2{
 
 .why div i{
   font-size:26px;
-  color:var(--green);
+  color:var(--dark);
 }
 
 /* FILTER BUTTONS */
@@ -174,7 +174,7 @@ h2{
 
 .filter button.active,
 .filter button:hover{
-  background:var(--orange);
+  background:var(--dark);
   color:#fff;
 }
 
