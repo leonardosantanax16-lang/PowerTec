@@ -4,7 +4,243 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Power Tec | iPhones Originais</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<style>
+:root{
+  --orange:#ff7a00;
+  --green:#1fa84f;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#f5f5f7;color:#1d1d1f}
+
+/* HEADER */
+header{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:26px;
+  position:relative;
+  overflow:hidden;
+}
+header h1{font-size:28px;font-weight:600}
+.tec{color:var(--orange)}
+header p{font-size:13px;opacity:.9}
+
+/* FUNDO ANIMADO (SÓ DESKTOP) */
+@media (min-width:768px){
+  .header-bg{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+  }
+  .header-bg span{
+    position:absolute;
+    top:-80px;
+    font-size:26px;
+    opacity:.06;
+    filter:blur(2px);
+    animation:fall linear infinite;
+  }
+  .header-bg .apple{
+    font-size:30px;
+    opacity:.05;
+  }
+  @keyframes fall{
+    to{transform:translateY(300px) rotate(180deg)}
+  }
+}
+header > *{position:relative;z-index:1}
+
+/* FILTER */
+.filter{
+  display:flex;justify-content:center;gap:16px;
+  margin:60px 0 40px;flex-wrap:wrap
+}
+.filter button{
+  padding:12px 28px;border-radius:24px;border:none;
+  background:#ddd;font-weight:500;cursor:pointer
+}
+.filter button.active{background:var(--orange);color:#fff}
+
+/* SECTION */
+section{
+  max-width:1400px;margin:0 auto 80px;
+  padding:60px 32px;background:#fff;
+  border-radius:32px;box-shadow:0 30px 70px rgba(0,0,0,.12)
+}
+section h2{text-align:center;margin-bottom:50px}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px
+}
+
+/* CARD */
+.card{
+  background:#fff;border-radius:24px;padding:26px;
+  text-align:center;box-shadow:0 18px 40px rgba(0,0,0,.12);
+  opacity:0;transform:translateY(20px);transition:.4s
+}
+.card.show{opacity:1;transform:none}
+.badge{
+  font-size:12px;padding:6px 14px;border-radius:20px;
+  background:#eee;display:inline-block;margin-bottom:10px
+}
+.model{font-size:16px;font-weight:600}
+.colors{
+  font-size:12px;color:#777;margin-top:6px
+}
+.colors a{color:#777;text-decoration:none}
+.colors a:hover{color:var(--orange)}
+.price{font-size:20px;font-weight:600;color:var(--green);margin-top:6px}
+.installments{font-size:13px;color:#555;margin:10px 0}
+.buy{
+  display:inline-block;margin-top:10px;
+  padding:12px 28px;border-radius:26px;
+  background:var(--orange);color:#fff;
+  text-decoration:none;font-weight:500
+}
+
+/* FOOTER */
+footer{text-align:center;color:#555;margin-bottom:40px}
+.whatsapp-float{
+  position:fixed;right:22px;bottom:22px;
+  background:var(--green);color:#fff;
+  padding:16px 24px;border-radius:40px;
+  text-decoration:none;font-weight:500
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-bg">
+    <span style="left:10%;animation-duration:18s">🍎</span>
+    <span style="left:25%;animation-duration:24s">🍎</span>
+    <span class="apple" style="left:40%;animation-duration:30s"><i class="fa-brands fa-apple"></i></span>
+    <span style="left:55%;animation-duration:22s">🍎</span>
+    <span class="apple" style="left:70%;animation-duration:34s"><i class="fa-brands fa-apple"></i></span>
+    <span style="left:85%;animation-duration:26s">🍎</span>
+  </div>
+
+  <h1>Power <span class="tec">Tec</span></h1>
+  <p>iPhones Originais • Maricá - RJ</p>
+
+  <a href="https://www.instagram.com/_powertec?igsh=Y2poNm01dmNuZ2Jj"
+     target="_blank"
+     style="display:inline-flex;align-items:center;gap:6px;
+            margin-top:8px;font-size:13px;color:#bbb;text-decoration:none">
+    <i class="fa-brands fa-instagram"></i> @_powertec
+  </a>
+</header>
+
+<div class="filter">
+  <button class="active" onclick="render('all',this)">Todos</button>
+  <button onclick="render('seminovo',this)">Seminovos</button>
+  <button onclick="render('lacrado',this)">Lacrados</button>
+</div>
+
+<section>
+<h2>Modelos disponíveis</h2>
+<div class="grid" id="grid"></div>
+</section>
+
+<footer>
+  <p>📍 Maricá - RJ</p>
+  <p>📞 (21) 96729-6969</p>
+  <p style="margin-top:10px">
+    <a href="https://www.instagram.com/_powertec?igsh=Y2poNm01dmNuZ2Jj" target="_blank"
+       style="text-decoration:none;color:#555;font-weight:500">
+      <i class="fa-brands fa-instagram"></i> @_powertec
+    </a>
+  </p>
+  <p style="margin-top:10px">© Power Tec</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5521967296969">💬 WhatsApp</a>
+
+<script>
+const products = [
+/* SEMINOVOS */
+["seminovo","iPhone 11 64GB","1.490","149,73","104,23"],
+["seminovo","iPhone 11 128GB","1.690","168,56","117,34"],
+["seminovo","iPhone 11 Pro 64GB","1.690","168,56","117,34"],
+["seminovo","iPhone 11 Pro 256GB","1.990","196,81","137,01"],
+["seminovo","iPhone 11 Pro Max 64GB","2.090","206,23","143,57"],
+["seminovo","iPhone 11 Pro Max 256GB","2.290","225,06","156,68"],
+["seminovo","iPhone 12 64GB","1.990","206,23","143,57"],
+["seminovo","iPhone 12 128GB","2.190","215,64","150,12"],
+["seminovo","iPhone 12 Pro 128GB","2.490","243,89","169,79"],
+["seminovo","iPhone 12 Pro 256GB","2.790","272,14","189,46"],
+["seminovo","iPhone 12 Pro Max 128GB","2.990","300,39","209,12"],
+["seminovo","iPhone 12 Pro Max 256GB","3.090","300,39","209,12"],
+["seminovo","iPhone 13 128GB","2.490","243,89","169,79"],
+["seminovo","iPhone 13 Pro 128GB","3.190","309,81","215,68"],
+["seminovo","iPhone 13 Pro 256GB","3.390","328,64","228,79"],
+["seminovo","iPhone 13 Pro Max 128GB","3.590","347,48","241,90"],
+["seminovo","iPhone 13 Pro Max 256GB","3.890","375,73","261,57"],
+["seminovo","iPhone 14 128GB","2.890","281,56","196,01"],
+["seminovo","iPhone 14 Pro 128GB","3.890","375,73","261,57"],
+["seminovo","iPhone 14 Pro 256GB","4.090","394,56","274,68"],
+["seminovo","iPhone 14 Pro Max 128GB","4.390","422,81","294,34"],
+["seminovo","iPhone 14 Pro Max 256GB","4.590","441,64","307,46"],
+["seminovo","iPhone 15 128GB","3.790","366,31","255,01"],
+["seminovo","iPhone 15 Pro 128GB","4.790","460,48","320,57"],
+["seminovo","iPhone 15 Pro 256GB","4.990","479,31","333,68"],
+["seminovo","iPhone 15 Pro 512GB","5.290","507,56","353,34"],
+["seminovo","iPhone 15 Pro Max 256GB","5.190","498,14","346,79"],
+["seminovo","iPhone 15 Pro Max 512GB","5.590","535,81","373,01"],
+["seminovo","iPhone 16 128GB","4.390","422,81","294,34"],
+["seminovo","iPhone 16 Pro 128GB","6.190","592,31","412,34"],
+["seminovo","iPhone 16 Pro Max 256GB","6.490","620,56","432,01"],
+["seminovo","iPhone 16 Pro Max 512GB","6.990","667,64","464,79"],
+
+/* LACRADOS */
+["lacrado","iPhone 13 128GB","3.390","328,64","228,79"],
+["lacrado","iPhone 14 128GB","3.890","375,75","261,57"],
+["lacrado","iPhone 15 128GB","4.290","413,39","287,79"],
+["lacrado","iPhone 16 128GB","5.090","484,39","340,50"],
+["lacrado","iPhone 16 256GB","5.790","554,64","386,12"],
+["lacrado","iPhone 17 256GB","6.890","652,40","459,90"],
+["lacrado","iPhone 17 Pro 256GB","8.590","818,31","569,68"],
+["lacrado","iPhone 17 Pro Max 256GB","9.790","931,31","648,34"]
+];
+
+const grid=document.getElementById("grid");
+const observer=new IntersectionObserver(e=>e.forEach(i=>i.isIntersecting&&i.target.classList.add("show")),{threshold:.15});
+
+function render(type,btn){
+  document.querySelectorAll(".filter button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  grid.innerHTML="";
+  products.filter(p=>type==="all"||p[0]===type).forEach(p=>{
+    const c=document.createElement("div");
+    c.className="card";
+    c.innerHTML=`
+      <div class="badge">${p[0]}</div>
+      <div class="model">${p[1]}</div>
+      <div class="colors">
+        <a href="https://wa.me/5521967296969?text=Olá,%20quais%20cores%20estão%20disponíveis%20para%20o%20${encodeURIComponent(p[1])}?" target="_blank">
+          Consulta cores disponíveis
+        </a>
+      </div>
+      <div class="price">R$ ${p[2]} à vista</div>
+      <div class="installments">12x R$${p[3]} • 18x R$${p[4]}</div>
+      <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20${encodeURIComponent(p[1])}">Comprar</a>`;
+    grid.appendChild(c);observer.observe(c);
+  });
+}
+render("all",document.querySelector(".filter button"));
+</script>
+
+</body>
+</html>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
