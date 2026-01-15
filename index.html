@@ -3,16 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Power Tec | iPhones Originais em Maricá RJ</title>
 <meta name="description" content="Power Tec - Loja física em Maricá RJ. iPhones originais seminovos e lacrados. +7 anos no mercado, entrega rápida em todo RJ e aceitamos seu iPhone como entrada.">
-
+<meta name="keywords" content="iPhone, Maricá, Power Tec, loja de iPhone, seminovo, lacrado, iPhone original">
+<meta name="robots" content="index, follow">
 <meta name="geo.region" content="BR-RJ">
 <meta name="geo.placename" content="Maricá">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Power Tec",
+  "image": "",
+  "url": "",
+  "telephone": "+5521967296969",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Vereador Francisco Sabino da Costa, 129",
+    "addressLocality": "Maricá",
+    "addressRegion": "RJ",
+    "postalCode": "24900-100",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -22.9380,
+    "longitude": -42.9950
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/_powertec",
+    "https://www.facebook.com/powertec"
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -21,17 +55,15 @@
   <h1>Power <span>Tec</span></h1>
   <p>iPhones Originais • Loja Física em Maricá RJ</p>
 
- <div class="top-actions">
-  <a href="#trade" class="cta-main">
-    Aceitamos seu iPhone como entrada
-    <span>faça sua simulação</span>
-  </a>
-
-  <a href="https://www.instagram.com/_powertec" target="_blank" class="cta-secondary">
-    <i class="fa-brands fa-instagram"></i>
-    PowerTec • siga a gente
-  </a>
-</div>
+  <div class="top-actions">
+    <a href="#trade" class="cta-main">
+      Aceitamos seu iPhone como entrada
+      <span>faça sua simulação</span>
+    </a>
+    <a href="https://www.instagram.com/_powertec" target="_blank" class="cta-secondary">
+      <i class="fa-brands fa-instagram"></i> PowerTec • siga a gente
+    </a>
+  </div>
 
   <div class="trust">
     <div><i class="fa-solid fa-store"></i> Loja física</div>
@@ -41,7 +73,6 @@
   </div>
 </header>
 
-<!-- PROVA SOCIAL -->
 <section class="why-section">
   <div class="why">
     <div><i class="fa-solid fa-check"></i><p>Aparelhos 100% originais</p></div>
@@ -52,20 +83,16 @@
   </div>
 </section>
 
-<!-- PRODUTOS -->
 <section>
   <h2>Modelos disponíveis</h2>
-
   <div class="filter">
     <button class="active" onclick="render('all',this)">Todos</button>
     <button onclick="render('seminovo',this)">Seminovos</button>
     <button onclick="render('lacrado',this)">Lacrados</button>
   </div>
-
   <div class="grid" id="grid"></div>
 </section>
 
-<!-- TRADE -->
 <section id="trade">
   <h2>Use seu iPhone como entrada</h2>
   <div style="text-align:center">
@@ -73,70 +100,49 @@
   </div>
 </section>
 
-<!-- MAPA -->
-<section>
-  <h2>Nossa loja</h2>
-  <div class="map">
-    <p>
-      Avenida Vereador Francisco Sabino da Costa, 129– Maricá RJ<br>
-      CEP 24900-100   "em frente ao super market"
-    </p>
-    <iframe src="https://www.google.com/maps?q=Avenida%20Vereador%20Francisco%20Sabino%20da%20Costa%20129%20Maric%C3%A1&output=embed"></iframe>
-  </div>
-</section>
-
-<footer>
-  <p>📍 Maricá - RJ</p>
-  <p>📞 (21) 96729-6969</p>
-  <p>© Power Tec</p>
-</footer>
-
-<a class="whats" href="https://wa.me/5521967296969">WhatsApp</a>
-
-<script>
 const products = [
-  ["seminovo","iPhone 11 64GB","1.490","149,73","104,23"],
-  ["seminovo","iPhone 11 128GB","1.690","168,56","117,34"],
-  ["seminovo","iPhone 11 Pro 64GB","1.690","168,56","117,34"],
-  ["seminovo","iPhone 11 Pro 256GB","1.990","196,81","137,01"],
-  ["seminovo","iPhone 11 Pro Max 64GB","2.090","206,23","143,57"],
-  ["seminovo","iPhone 11 Pro Max 256GB","2.290","225,06","156,68"],
-  ["seminovo","iPhone 12 64GB","1.990","206,23","143,57"],
-  ["seminovo","iPhone 12 128GB","2.190","215,64","150,12"],
-  ["seminovo","iPhone 12 Pro 128GB","2.490","243,89","169,79"],
-  ["seminovo","iPhone 12 Pro 256GB","2.790","272,14","189,46"],
-  ["seminovo","iPhone 12 Pro Max 128GB","2.990","300,39","209,12"],
-  ["seminovo","iPhone 12 Pro Max 256GB","3.090","300,39","209,12"],
-  ["seminovo","iPhone 13 128GB","2.490","243,89","169,79"],
-  ["seminovo","iPhone 13 Pro 128GB","3.190","309,81","215,68"],
-  ["seminovo","iPhone 13 Pro 256GB","3.390","328,64","228,79"],
-  ["seminovo","iPhone 13 Pro Max 128GB","3.590","347,48","241,90"],
-  ["seminovo","iPhone 13 Pro Max 256GB","3.890","375,73","261,57"],
-  ["seminovo","iPhone 14 128GB","2.890","281,56","196,01"],
-  ["seminovo","iPhone 14 Pro 128GB","3.890","375,73","261,57"],
-  ["seminovo","iPhone 14 Pro 256GB","4.090","394,56","274,68"],
-  ["seminovo","iPhone 14 Pro Max 128GB","4.390","422,81","294,34"],
-  ["seminovo","iPhone 14 Pro Max 256GB","4.590","441,64","307,46"],
-  ["seminovo","iPhone 15 128GB","3.790","366,31","255,01"],
-  ["seminovo","iPhone 15 Pro 128GB","4.790","460,48","320,57"],
-  ["seminovo","iPhone 15 Pro 256GB","4.990","479,31","333,68"],
-  ["seminovo","iPhone 15 Pro 512GB","5.290","507,56","353,34"],
-  ["seminovo","iPhone 15 Pro Max 256GB","5.190","498,14","346,79"],
-  ["seminovo","iPhone 15 Pro Max 512GB","5.590","535,81","373,01"],
-  ["seminovo","iPhone 16 128GB","4.390","422,81","294,34"],
-  ["seminovo","iPhone 16 256GB","4.790","460,48","320,57"],
-  ["seminovo","iPhone 16 Pro 128GB","6.190","592,31","412,34"],
-  ["seminovo","iPhone 16 Pro 256GB","6.490","620,56","432,01"],
-  ["seminovo","iPhone 16 Pro Max 256GB","6.490","620,56","432,01"],
-  ["seminovo","iPhone 16 Pro Max 512GB","6.990","667,64","464,79"],
-  ["lacrado","iPhone 13 128GB","3.390","328,64","228,79"],
-  ["lacrado","iPhone 14 128GB","3.890","375,75","261,57"],
-  ["lacrado","iPhone 15 128GB","4.290","413,39","287,79"],
-  ["lacrado","iPhone 16 128GB","5.090","484,39","340,50"],
-  ["lacrado","iPhone 16 256GB","5.790","554,64","386,12"],
-  ["lacrado","iPhone 17 256GB","6.890","652,40","459,90"],
-  ["lacrado","iPhone 17 Pro 256GB","8.590","818,31","569,68"],
-  ["lacrado","iPhone 17 Pro Max 256GB","9.790","931,31","648,34"]
+  ["seminovo","iPhone 11 64GB","1490","149,73","104,23",10],
+  ["seminovo","iPhone 11 128GB","1690","168,56","117,34",8],
+  ["seminovo","iPhone 11 Pro 64GB","1690","168,56","117,34",5],
+  ["seminovo","iPhone 11 Pro 256GB","1990","196,81","137,01",4],
+  ["seminovo","iPhone 11 Pro Max 64GB","2090","206,23","143,57",6],
+  ["seminovo","iPhone 11 Pro Max 256GB","2290","225,06","156,68",3],
+  ["seminovo","iPhone 12 64GB","1990","206,23","143,57",7],
+  ["seminovo","iPhone 12 128GB","2190","215,64","150,12",5],
+  ["seminovo","iPhone 12 Pro 128GB","2490","243,89","169,79",6],
+  ["seminovo","iPhone 12 Pro 256GB","2790","272,14","189,46",4],
+  ["seminovo","iPhone 12 Pro Max 128GB","2990","300,39","209,12",5],
+  ["seminovo","iPhone 12 Pro Max 256GB","3090","300,39","209,12",2],
+  ["seminovo","iPhone 13 128GB","2490","243,89","169,79",6],
+  ["seminovo","iPhone 13 Pro 128GB","3190","309,81","215,68",4],
+  ["seminovo","iPhone 13 Pro 256GB","3390","328,64","228,79",3],
+  ["seminovo","iPhone 13 Pro Max 128GB","3590","347,48","241,90",2],
+  ["seminovo","iPhone 13 Pro Max 256GB","3890","375,73","261,57",1],
+  ["seminovo","iPhone 14 128GB","2890","281,56","196,01",5],
+  ["seminovo","iPhone 14 Pro 128GB","3890","375,73","261,57",3],
+  ["seminovo","iPhone 14 Pro 256GB","4090","394,56","274,68",2],
+  ["seminovo","iPhone 14 Pro Max 128GB","4390","422,81","294,34",1],
+  ["seminovo","iPhone 14 Pro Max 256GB","4590","441,64","307,46",0],
+  ["seminovo","iPhone 15 128GB","3790","366,31","255,01",4],
+  ["seminovo","iPhone 15 Pro 128GB","4790","460,48","320,57",2],
+  ["seminovo","iPhone 15 Pro 256GB","4990","479,31","333,68",1],
+  ["seminovo","iPhone 15 Pro 512GB","5290","507,56","353,34",1],
+  ["seminovo","iPhone 15 Pro Max 256GB","5190","498,14","346,79",0],
+  ["seminovo","iPhone 15 Pro Max 512GB","5590","535,81","373,01",0],
+  ["seminovo","iPhone 16 128GB","4390","422,81","294,34",3],
+  ["seminovo","iPhone 16 256GB","4790","460,48","320,57",2],
+  ["seminovo","iPhone 16 Pro 128GB","6190","592,31","412,34",1],
+  ["seminovo","iPhone 16 Pro 256GB","6490","620,56","432,01",0],
+  ["seminovo","iPhone 16 Pro Max 256GB","6490","620,56","432,01",0],
+  ["seminovo","iPhone 16 Pro Max 512GB","6990","667,64","464,79",0],
+  ["lacrado","iPhone 13 128GB","3390","328,64","228,79",3],
+  ["lacrado","iPhone 14 128GB","3890","375,75","261,57",2],
+  ["lacrado","iPhone 15 128GB","4290","413,39","287,79",1],
+  ["lacrado","iPhone 16 128GB","5090","484,39","340,50",1],
+  ["lacrado","iPhone 16 256GB","5790","554,64","386,12",0],
+  ["lacrado","iPhone 17 256GB","6890","652,40","459,90",0],
+  ["lacrado","iPhone 17 Pro 256GB","8590","818,31","569,68",0],
+  ["lacrado","iPhone 17 Pro Max 256GB","9790","931,31","648,34",0]
 ];
 
 const grid=document.getElementById("grid");
@@ -146,22 +152,19 @@ function render(type,btn){
   btn.classList.add("active");
   grid.innerHTML="";
   products.filter(p=>type==="all"||p[0]===type).forEach(p=>{
+    const isOut = p[5]===0;
     grid.innerHTML+=`
       <div class="card">
         <div class="badge">${p[0]}</div>
         <div class="model">${p[1]}</div>
-        <div class="colors">consultar cores disponíveis</div>
-       <div class="price">
-  <span class="cash">R$ ${p[2]}</span>
-  <span class="avista">à vista</span>
-</div>
+        <div class="colors">Consultar cores disponíveis</div>
+        <div class="price"><span class="cash">R$ ${p[2]}</span> <span class="avista">à vista</span></div>
         <div class="installments">12x R$${p[3]} • 18x R$${p[4]}</div>
-        <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20${encodeURIComponent(p[1])}">
-          Comprar
-        </a>
+        <a class="buy" href="${isOut?'#':'https://wa.me/5521967296969?text=Tenho interesse no '+encodeURIComponent(p[1])}" ${isOut?'style="background:#ccc;cursor:not-allowed;"':''}>${isOut?'Esgotado':'Comprar'}</a>
       </div>`;
   });
 }
+
 render("all",document.querySelector(".filter button"));
 
 function openTrade(){
@@ -170,7 +173,6 @@ function openTrade(){
     alert("Não aceitamos aparelhos recondicionados ou com peças trocadas.");
     return;
   }
-
   const modelo = prompt("Modelo do seu iPhone:");
   const cor = prompt("Cor do aparelho:");
   const memoria = prompt("Memória (GB):");
@@ -189,7 +191,24 @@ Modelo de interesse: ${interesse}`;
 
   window.open("https://wa.me/5521967296969?text="+encodeURIComponent(msg),"_blank");
 }
-</script>
 
+  
+<section>
+  <h2>Nossa loja</h2>
+  <div class="map">
+    <p>Avenida Vereador Francisco Sabino da Costa, 129 – Maricá RJ<br>CEP 24900-100</p>
+    <iframe src="https://www.google.com/maps?q=Avenida%20Vereador%20Francisco%20da%20Costa%20129%20Maricá&output=embed"></iframe>
+  </div>
+</section>
+
+<footer>
+  <p>📍 Maricá - RJ</p>
+  <p>📞 (21) 96729-6969</p>
+  <p>© Power Tec</p>
+</footer>
+
+<a class="whats" href="https://wa.me/5521967296969">WhatsApp</a>
+
+<script src="script.js"></script>
 </body>
 </html>
