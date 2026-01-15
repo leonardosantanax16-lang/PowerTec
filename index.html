@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Power Tec | iPhones Originais em Maricá RJ</title>
-<meta name="description" content="Power Tec - Loja física em Maricá RJ. iPhones originais seminovos e lacrados. +7 anos no mercado, entrega rápida em todo RJ e aceitamos seu iPhone como entrada.">
-
-<meta name="geo.region" content="BR-RJ">
-<meta name="geo.placename" content="Maricá">
+<meta name="description" content="Power Tec - Loja física em Maricá RJ. iPhones originais lacrados e seminovos. Mais de 7 anos no mercado. Aceitamos seu iPhone como entrada.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,146 +18,84 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{background:var(--gray);color:#111}
-
-/* HEADER */
 header{
   background:#000;
   color:#fff;
-  padding:70px 20px 55px;
+  padding:60px 20px;
   text-align:center;
 }
-header h1{font-size:46px}
+header h1{font-size:34px}
 header span{color:var(--orange)}
-header p{opacity:.85;margin:10px 0}
+header p{opacity:.85;margin-top:8px}
 
-.top-actions{
-  margin-top:25px;
-  display:flex;
-  justify-content:center;
-  gap:16px;
-  flex-wrap:wrap;
-}
-.top-actions a{
+.cta{margin-top:22px}
+.cta a{
   background:var(--orange);
-  padding:14px 34px;
-  border-radius:50px;
   color:#fff;
+  padding:14px 26px;
+  border-radius:8px;
   text-decoration:none;
-  font-size:14px;
+  font-weight:600;
 }
+.cta small{display:block;margin-top:6px;font-size:12px;opacity:.7}
 
-/* TRUST */
-.trust{
-  display:flex;
-  justify-content:center;
-  gap:24px;
-  flex-wrap:wrap;
-  margin-top:30px;
-  font-size:13px;
-}
-.trust div i{color:var(--orange);margin-right:6px}
+section{max-width:1200px;margin:auto;padding:55px 20px}
+h2{text-align:center;margin-bottom:35px}
 
-/* SECTION */
-section{
-  max-width:1400px;
-  margin:60px auto;
-  padding:0 24px;
-}
-section h2{text-align:center;margin-bottom:36px}
-
-/* WHY FLOATING */
 .why{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
-}
-.why div{
-  background:transparent;
-  padding:20px;
   text-align:center;
 }
-.why i{font-size:24px;color:var(--orange);margin-bottom:10px}
+.why i{font-size:26px;color:var(--orange);margin-bottom:8px}
 
-/* FILTER */
-.filter{
-  display:flex;
-  justify-content:center;
-  gap:16px;
-  margin-bottom:40px;
-}
-.filter button{
-  padding:12px 30px;
-  border:none;
-  border-radius:30px;
-  cursor:pointer;
-}
-.filter .active{background:var(--orange);color:#fff}
-
-/* PRODUCTS */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
+  gap:22px;
 }
 .card{
   background:#fff;
-  padding:26px;
-  border-radius:26px;
+  padding:22px;
+  border-radius:12px;
   text-align:center;
 }
 .badge{
   font-size:12px;
   background:#eee;
-  padding:6px 14px;
+  padding:5px 14px;
   border-radius:20px;
 }
-.model{font-weight:600;margin-top:10px}
-.colors{
-  font-size:12px;
-  color:#666;
-  margin:6px 0;
-}
-.price{color:var(--green);font-weight:600;margin:10px 0}
-.installments{font-size:13px;color:#555}
+.model{font-weight:600;margin:10px 0}
+.colors{font-size:12px;color:#666;margin-bottom:10px}
+.price{color:var(--green);font-weight:600}
+.installments{font-size:13px;color:#555;margin-top:6px}
 .buy{
   display:inline-block;
   background:var(--orange);
   color:#fff;
-  padding:12px 28px;
+  padding:12px 26px;
   border-radius:30px;
   text-decoration:none;
   margin-top:14px;
 }
 
-/* MAP */
-.map{
-  background:#fff;
-  padding:40px;
-  border-radius:30px;
-}
 .map iframe{
   width:100%;
-  height:380px;
+  height:360px;
   border:0;
-  border-radius:20px;
+  border-radius:12px;
 }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  color:#555;
-  padding:40px 20px;
-}
-
-/* WHATS */
 .whats{
   position:fixed;
-  bottom:20px;
   right:20px;
+  bottom:20px;
   background:var(--green);
   color:#fff;
-  padding:14px 24px;
-  border-radius:50px;
+  padding:14px 22px;
+  border-radius:40px;
   text-decoration:none;
 }
 </style>
@@ -172,165 +107,114 @@ footer{
   <h1>Power <span>Tec</span></h1>
   <p>iPhones Originais • Loja Física em Maricá RJ</p>
 
-  <div class="top-actions">
+  <div class="cta">
     <a href="#trade">Aceitamos seu iPhone como entrada</a>
-    <a href="https://www.instagram.com/_powertec" target="_blank">
-      <i class="fa-brands fa-instagram"></i> Instagram
-    </a>
-  </div>
-
-  <div class="trust">
-    <div><i class="fa-solid fa-store"></i> Loja física</div>
-    <div><i class="fa-solid fa-medal"></i> +7 anos no mercado</div>
-    <div><i class="fa-solid fa-truck-fast"></i> Entrega rápida RJ</div>
-    <div><i class="fa-solid fa-shield-halved"></i> Compra segura</div>
+    <small>faça sua simulação</small>
   </div>
 </header>
 
-<!-- WHY + PROVA SOCIAL -->
-<section style="margin-top:-30px;margin-bottom:40px">
-  <div class="why">
-    <div><i class="fa-solid fa-check"></i><p>Aparelhos 100% originais</p></div>
-    <div><i class="fa-solid fa-award"></i><p>+7 anos no mercado</p></div>
-    <div><i class="fa-solid fa-users"></i><p>Mais de 1.000 clientes atendidos</p></div>
-    <div><i class="fa-solid fa-lock"></i><p>Empresa séria e transparente</p></div>
-    <div><i class="fa-solid fa-location-dot"></i><p>Loja física em Maricá RJ</p></div>
-    <div><i class="fa-solid fa-star"></i><p>Clientes satisfeitos em todo o RJ</p></div>
-  </div>
+<section style="margin-top:-20px">
+<div class="why">
+  <div><i class="fa-solid fa-store"></i><p>Loja física em Maricá</p></div>
+  <div><i class="fa-solid fa-award"></i><p>+7 anos no mercado</p></div>
+  <div><i class="fa-solid fa-shield-halved"></i><p>Compra segura</p></div>
+  <div><i class="fa-solid fa-star"></i><p>Clientes satisfeitos</p></div>
+</div>
 </section>
 
-<!-- PRODUCTS -->
 <section>
-  <h2>Modelos disponíveis</h2>
-
-  <div class="filter">
-    <button class="active" onclick="render('all',this)">Todos</button>
-    <button onclick="render('seminovo',this)">Seminovos</button>
-    <button onclick="render('lacrado',this)">Lacrados</button>
-  </div>
-
-  <div class="grid" id="grid"></div>
+<h2>Modelos disponíveis</h2>
+<div class="grid" id="grid"></div>
 </section>
 
-<!-- TRADE -->
 <section id="trade">
-  <h2>Use seu iPhone como entrada</h2>
-  <div style="text-align:center">
-    <a class="buy" href="javascript:openTrade()">Iniciar avaliação</a>
-  </div>
+<h2>Avalie seu iPhone</h2>
+<div style="text-align:center">
+  <a class="buy" href="javascript:openTrade()">Iniciar avaliação</a>
+</div>
 </section>
 
-<!-- MAP -->
 <section>
-  <h2>Nossa loja</h2>
-  <div class="map">
-    <p style="text-align:center;margin-bottom:20px">
-      Avenida Vereador Francisco Sabino da Costa, 129 – Maricá RJ<br>
-      CEP 24900-100
-    </p>
-    <iframe src="https://www.google.com/maps?q=Avenida%20Vereador%20Francisco%20Sabino%20da%20Costa%20129%20Maric%C3%A1&output=embed"></iframe>
-  </div>
+<h2>Nossa loja</h2>
+<p style="text-align:center;margin-bottom:15px">
+Avenida Vereador Francisco Sabino da Costa, 129 – Maricá RJ<br>
+CEP 24900-100
+</p>
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Avenida%20Vereador%20Francisco%20Sabino%20da%20Costa%20129%20Maric%C3%A1%20RJ&output=embed"></iframe>
+</div>
 </section>
-
-<footer>
-  <p>📍 Maricá - RJ</p>
-  <p>📞 (21) 96729-6969</p>
-  <p>© Power Tec</p>
-</footer>
 
 <a class="whats" href="https://wa.me/5521967296969">WhatsApp</a>
 
 <script>
 const products = [
-["seminovo","iPhone 11 64GB","1.490","149,73","104,23"],
-["seminovo","iPhone 11 128GB","1.690","168,56","117,34"],
-["seminovo","iPhone 11 Pro 64GB","1.690","168,56","117,34"],
-["seminovo","iPhone 11 Pro 256GB","1.990","196,81","137,01"],
-["seminovo","iPhone 11 Pro Max 64GB","2.090","206,23","143,57"],
-["seminovo","iPhone 11 Pro Max 256GB","2.290","225,06","156,68"],
-["seminovo","iPhone 12 64GB","1.990","206,23","143,57"],
-["seminovo","iPhone 12 128GB","2.190","215,64","150,12"],
-["seminovo","iPhone 12 Pro 128GB","2.490","243,89","169,79"],
-["seminovo","iPhone 12 Pro 256GB","2.790","272,14","189,46"],
-["seminovo","iPhone 12 Pro Max 128GB","2.990","300,39","209,12"],
-["seminovo","iPhone 12 Pro Max 256GB","3.090","300,39","209,12"],
-["seminovo","iPhone 13 128GB","2.490","243,89","169,79"],
-["seminovo","iPhone 13 Pro 128GB","3.190","309,81","215,68"],
-["seminovo","iPhone 13 Pro 256GB","3.390","328,64","228,79"],
-["seminovo","iPhone 13 Pro Max 128GB","3.590","347,48","241,90"],
-["seminovo","iPhone 13 Pro Max 256GB","3.890","375,73","261,57"],
-["seminovo","iPhone 14 128GB","2.890","281,56","196,01"],
-["seminovo","iPhone 14 Pro 128GB","3.890","375,73","261,57"],
-["seminovo","iPhone 14 Pro 256GB","4.090","394,56","274,68"],
-["seminovo","iPhone 14 Pro Max 128GB","4.390","422,81","294,34"],
-["seminovo","iPhone 14 Pro Max 256GB","4.590","441,64","307,46"],
-["seminovo","iPhone 15 128GB","3.790","366,31","255,01"],
-["seminovo","iPhone 15 Pro 128GB","4.790","460,48","320,57"],
-["seminovo","iPhone 15 Pro 256GB","4.990","479,31","333,68"],
-["seminovo","iPhone 15 Pro 512GB","5.290","507,56","353,34"],
-["seminovo","iPhone 15 Pro Max 256GB","5.190","498,14","346,79"],
-["seminovo","iPhone 15 Pro Max 512GB","5.590","535,81","373,01"],
+["Seminovo","iPhone 11 64GB","1.490","149,73","104,23"],
+["Seminovo","iPhone 11 128GB","1.690","168,56","117,34"],
+["Seminovo","iPhone 11 Pro 64GB","1.690","168,56","117,34"],
+["Seminovo","iPhone 11 Pro 256GB","1.990","196,81","137,01"],
+["Seminovo","iPhone 11 Pro Max 64GB","2.090","206,23","143,57"],
+["Seminovo","iPhone 11 Pro Max 256GB","2.290","225,06","156,68"],
+["Seminovo","iPhone 12 64GB","1.990","206,23","143,57"],
+["Seminovo","iPhone 12 128GB","2.190","215,64","150,12"],
+["Seminovo","iPhone 12 Pro 128GB","2.490","243,89","169,79"],
+["Seminovo","iPhone 12 Pro 256GB","2.790","272,14","189,46"],
+["Seminovo","iPhone 12 Pro Max 128GB","2.990","300,39","209,12"],
+["Seminovo","iPhone 12 Pro Max 256GB","3.090","300,39","209,12"],
+["Seminovo","iPhone 13 128GB","2.490","243,89","169,79"],
+["Seminovo","iPhone 13 Pro 128GB","3.190","309,81","215,68"],
+["Seminovo","iPhone 13 Pro 256GB","3.390","328,64","228,79"],
+["Seminovo","iPhone 13 Pro Max 128GB","3.590","347,48","241,90"],
+["Seminovo","iPhone 13 Pro Max 256GB","3.890","375,73","261,57"],
+["Seminovo","iPhone 14 128GB","2.890","281,56","196,01"],
+["Seminovo","iPhone 14 Pro 128GB","3.890","375,73","261,57"],
+["Seminovo","iPhone 14 Pro 256GB","4.090","394,56","274,68"],
+["Seminovo","iPhone 14 Pro Max 128GB","4.390","422,81","294,34"],
+["Seminovo","iPhone 14 Pro Max 256GB","4.590","441,64","307,46"],
+["Seminovo","iPhone 15 128GB","3.790","366,31","255,01"],
+["Seminovo","iPhone 15 Pro 128GB","4.790","460,48","320,57"],
+["Seminovo","iPhone 15 Pro 256GB","4.990","479,31","333,68"],
+["Seminovo","iPhone 15 Pro 512GB","5.290","507,56","353,34"],
+["Seminovo","iPhone 15 Pro Max 256GB","5.190","498,14","346,79"],
+["Seminovo","iPhone 15 Pro Max 512GB","5.590","535,81","373,01"],
 ["seminovo","iPhone 16 128GB","4.390","422,81","294,34"],
+["seminovo","iPhone 16 256GB","4.790","460,48","320,57"],
 ["seminovo","iPhone 16 Pro 128GB","6.190","592,31","412,34"],
+["seminovo","iPhone 16 Pro 256GB","6.490","620,56","432,01"],
 ["seminovo","iPhone 16 Pro Max 256GB","6.490","620,56","432,01"],
 ["seminovo","iPhone 16 Pro Max 512GB","6.990","667,64","464,79"],
-["lacrado","iPhone 13 128GB","3.390","328,64","228,79"],
-["lacrado","iPhone 14 128GB","3.890","375,75","261,57"],
-["lacrado","iPhone 15 128GB","4.290","413,39","287,79"],
-["lacrado","iPhone 16 128GB","5.090","484,39","340,50"],
-["lacrado","iPhone 16 256GB","5.790","554,64","386,12"],
-["lacrado","iPhone 17 256GB","6.890","652,40","459,90"],
-["lacrado","iPhone 17 Pro 256GB","8.590","818,31","569,68"],
-["lacrado","iPhone 17 Pro Max 256GB","9.790","931,31","648,34"]
+["Lacrado","iPhone 13 128GB","3.390","328,64","228,79"],
+["Lacrado","iPhone 14 128GB","3.890","375,75","261,57"],
+["Lacrado","iPhone 15 128GB","4.290","413,39","287,79"],
+["Lacrado","iPhone 16 128GB","5.090","484,39","340,50"],
+["Lacrado","iPhone 16 256GB","5.790","554,64","386,12"],
+["Lacrado","iPhone 17 256GB","6.890","652,40","459,90"],
+["Lacrado","iPhone 17 Pro 256GB","8.590","818,31","569,68"],
+["Lacrado","iPhone 17 Pro Max 256GB","9.790","931,31","648,34"]
 ];
 
 const grid=document.getElementById("grid");
-
-function render(type,btn){
-  document.querySelectorAll(".filter button").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active");
-  grid.innerHTML="";
-  products.filter(p=>type==="all"||p[0]===type).forEach(p=>{
-    grid.innerHTML+=`
-      <div class="card">
-        <div class="badge">${p[0]}</div>
-        <div class="model">${p[1]}</div>
-        <div class="colors">consultar cores disponíveis</div>
-        <div class="price">R$ ${p[2]} à vista</div>
-        <div class="installments">12x R$${p[3]} • 18x R$${p[4]}</div>
-        <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20${encodeURIComponent(p[1])}">
-          Comprar
-        </a>
-      </div>`;
-  });
-}
-render("all",document.querySelector(".filter button"));
+products.forEach(p=>{
+  grid.innerHTML+=`
+  <div class="card">
+    <div class="badge">${p[0]}</div>
+    <div class="model">${p[1]}</div>
+    <div class="colors">consultar cores disponíveis</div>
+    <div class="price">R$ ${p[2]} à vista</div>
+    <div class="installments">12x R$${p[3]} • 18x R$${p[4]}</div>
+    <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20${encodeURIComponent(p[1])}">
+      Comprar
+    </a>
+  </div>`;
+});
 
 function openTrade(){
-  const peca = prompt("Seu iPhone possui alguma peça trocada? (responda apenas: NÃO ou SIM)");
-  if(!peca || peca.trim().toLowerCase() !== "não"){
-    alert("Não aceitamos aparelhos recondicionados ou com peças trocadas.");
+  const peca=prompt("Seu iPhone possui peça trocada? (SIM ou NÃO)");
+  if(!peca || peca.toLowerCase()!=="não"){
+    alert("Não aceitamos aparelhos com peças trocadas ou recondicionados.");
     return;
   }
-
-  const modelo = prompt("Modelo do seu iPhone:");
-  const cor = prompt("Cor do aparelho:");
-  const memoria = prompt("Memória do aparelho (GB):");
-  const bateria = prompt("Saúde da bateria (%):");
-  const quebrado = prompt("Possui algo quebrado?");
-  const interesse = prompt("Modelo de interesse:");
-
-  const msg =
-`Avaliação de Seminovo – Power Tec
-
-Modelo: ${modelo}
-Cor: ${cor}
-Memória: ${memoria}
-Bateria: ${bateria}
-Possui algo quebrado: ${quebrado}
-Modelo de interesse: ${interesse}`;
-
-  window.open("https://wa.me/5521967296969?text="+encodeURIComponent(msg),"_blank");
+  window.open("https://wa.me/5521967296969","_blank");
 }
 </script>
 
