@@ -26,35 +26,36 @@ body{background:var(--gray);color:#111}
 header{
   background:#000;
   color:#fff;
-  padding:110px 20px 90px;
+  padding:70px 20px 55px;
   text-align:center;
 }
-header h1{font-size:52px}
+header h1{font-size:46px}
 header span{color:var(--orange)}
 header p{opacity:.85;margin:10px 0}
 
 .top-actions{
-  margin-top:30px;
+  margin-top:25px;
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:16px;
   flex-wrap:wrap;
 }
 .top-actions a{
   background:var(--orange);
-  padding:16px 36px;
+  padding:14px 34px;
   border-radius:50px;
   color:#fff;
   text-decoration:none;
+  font-size:14px;
 }
 
 /* TRUST */
 .trust{
   display:flex;
   justify-content:center;
-  gap:26px;
+  gap:24px;
   flex-wrap:wrap;
-  margin-top:40px;
+  margin-top:30px;
   font-size:13px;
 }
 .trust div i{color:var(--orange);margin-right:6px}
@@ -62,24 +63,23 @@ header p{opacity:.85;margin:10px 0}
 /* SECTION */
 section{
   max-width:1400px;
-  margin:80px auto;
+  margin:60px auto;
   padding:0 24px;
 }
-section h2{text-align:center;margin-bottom:40px}
+section h2{text-align:center;margin-bottom:36px}
 
-/* WHY */
+/* WHY FLOATING */
 .why{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
+  gap:20px;
 }
 .why div{
-  background:#fff;
-  padding:36px;
-  border-radius:30px;
+  background:transparent;
+  padding:20px;
   text-align:center;
 }
-.why i{font-size:26px;color:var(--orange);margin-bottom:14px}
+.why i{font-size:24px;color:var(--orange);margin-bottom:10px}
 
 /* FILTER */
 .filter{
@@ -187,34 +187,15 @@ footer{
   </div>
 </header>
 
-<!-- WHY -->
-<section>
-  <h2>Por que comprar na Power Tec?</h2>
-  <section style="margin-top:20px;margin-bottom:40px">
-  <div class="why">
-    <div style="background:transparent">
-      <i class="fa-solid fa-star"></i>
-      <p>Clientes satisfeitos em todo o RJ</p>
-    </div>
-    <div style="background:transparent">
-      <i class="fa-solid fa-comments"></i>
-      <p>Atendimento via WhatsApp rápido e humano</p>
-    </div>
-    <div style="background:transparent">
-      <i class="fa-solid fa-lock"></i>
-      <p>Compra segura e transparente</p>
-    </div>
-    <div style="background:transparent">
-      <i class="fa-solid fa-location-dot"></i>
-      <p>Loja física em Maricá RJ</p>
-    </div>
-  </div>
-</section>
+<!-- WHY + PROVA SOCIAL -->
+<section style="margin-top:-30px;margin-bottom:40px">
   <div class="why">
     <div><i class="fa-solid fa-check"></i><p>Aparelhos 100% originais</p></div>
-    <div><i class="fa-solid fa-award"></i><p>Mais de 7 anos no mercado</p></div>
-    <div><i class="fa-solid fa-headset"></i><p>Atendimento humanizado</p></div>
-    <div><i class="fa-solid fa-map-location-dot"></i><p>Atendemos todo RJ</p></div>
+    <div><i class="fa-solid fa-award"></i><p>+7 anos no mercado</p></div>
+    <div><i class="fa-solid fa-users"></i><p>Mais de 1.000 clientes atendidos</p></div>
+    <div><i class="fa-solid fa-lock"></i><p>Empresa séria e transparente</p></div>
+    <div><i class="fa-solid fa-location-dot"></i><p>Loja física em Maricá RJ</p></div>
+    <div><i class="fa-solid fa-star"></i><p>Clientes satisfeitos em todo o RJ</p></div>
   </div>
 </section>
 
@@ -229,6 +210,14 @@ footer{
   </div>
 
   <div class="grid" id="grid"></div>
+</section>
+
+<!-- TRADE -->
+<section id="trade">
+  <h2>Use seu iPhone como entrada</h2>
+  <div style="text-align:center">
+    <a class="buy" href="javascript:openTrade()">Iniciar avaliação</a>
+  </div>
 </section>
 
 <!-- MAP -->
@@ -253,7 +242,6 @@ footer{
 
 <script>
 const products = [
-/* SEMINOVOS */
 ["seminovo","iPhone 11 64GB","1.490","149,73","104,23"],
 ["seminovo","iPhone 11 128GB","1.690","168,56","117,34"],
 ["seminovo","iPhone 11 Pro 64GB","1.690","168,56","117,34"],
@@ -286,8 +274,6 @@ const products = [
 ["seminovo","iPhone 16 Pro 128GB","6.190","592,31","412,34"],
 ["seminovo","iPhone 16 Pro Max 256GB","6.490","620,56","432,01"],
 ["seminovo","iPhone 16 Pro Max 512GB","6.990","667,64","464,79"],
-
-/* LACRADOS */
 ["lacrado","iPhone 13 128GB","3.390","328,64","228,79"],
 ["lacrado","iPhone 14 128GB","3.890","375,75","261,57"],
 ["lacrado","iPhone 15 128GB","4.290","413,39","287,79"],
@@ -309,7 +295,7 @@ function render(type,btn){
       <div class="card">
         <div class="badge">${p[0]}</div>
         <div class="model">${p[1]}</div>
-        <div class="colors">consulta cores disponíveis</div>
+        <div class="colors">consultar cores disponíveis</div>
         <div class="price">R$ ${p[2]} à vista</div>
         <div class="installments">12x R$${p[3]} • 18x R$${p[4]}</div>
         <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20${encodeURIComponent(p[1])}">
@@ -319,6 +305,33 @@ function render(type,btn){
   });
 }
 render("all",document.querySelector(".filter button"));
+
+function openTrade(){
+  const peca = prompt("Seu iPhone possui alguma peça trocada? (responda apenas: NÃO ou SIM)");
+  if(!peca || peca.trim().toLowerCase() !== "não"){
+    alert("Não aceitamos aparelhos recondicionados ou com peças trocadas.");
+    return;
+  }
+
+  const modelo = prompt("Modelo do seu iPhone:");
+  const cor = prompt("Cor do aparelho:");
+  const memoria = prompt("Memória do aparelho (GB):");
+  const bateria = prompt("Saúde da bateria (%):");
+  const quebrado = prompt("Possui algo quebrado?");
+  const interesse = prompt("Modelo de interesse:");
+
+  const msg =
+`Avaliação de Seminovo – Power Tec
+
+Modelo: ${modelo}
+Cor: ${cor}
+Memória: ${memoria}
+Bateria: ${bateria}
+Possui algo quebrado: ${quebrado}
+Modelo de interesse: ${interesse}`;
+
+  window.open("https://wa.me/5521967296969?text="+encodeURIComponent(msg),"_blank");
+}
 </script>
 
 </body>
