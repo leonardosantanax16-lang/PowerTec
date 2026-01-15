@@ -3,284 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Power Tec | iPhones Originais</title>
-<meta name="description" content="Power Tec - iPhones originais seminovos e lacrados em Maricá RJ. Compra segura via WhatsApp.">
+
+<title>Power Tec | iPhones Originais em Maricá</title>
+<meta name="description" content="Power Tec - iPhones originais seminovos e lacrados em Maricá RJ. Compra segura pelo WhatsApp.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --white:#ffffff;
-  --gray:#f5f5f7;
-  --dark:#000000;
   --orange:#ff7a00;
   --green:#1fa84f;
 }
-
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-
-body{
-  background:linear-gradient(180deg,#f5f5f7,#e9e9e9);
-  color:#1d1d1f;
-}
+body{background:#f5f5f7;color:#1d1d1f}
 
 /* HEADER */
 header{
-  background:#000;
-  padding:20px 20px;
-  text-align:center;
-  color:#fff;
-  transition: all 0.3s ease;
+  background:#000;color:#fff;text-align:center;
+  padding:22px;position:sticky;top:0;z-index:10
 }
-
-header h1{
-  font-size:32px;
-  font-weight:600;
-  transition: font-size 0.3s ease;
-}
-
-.power{color:#fff}
+header h1{font-size:28px;font-weight:600}
 .tec{color:var(--orange)}
-
-header p{
-  color:#fff;
-  margin-top:5px;
-  font-size:14px;
-  letter-spacing:.5px;
-  transition: font-size 0.3s ease, margin-top 0.3s ease;
-}
+header p{font-size:13px;opacity:.9}
 
 /* FILTER */
 .filter{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  margin:50px 0;
-  flex-wrap: wrap;
+  display:flex;justify-content:center;gap:16px;
+  margin:60px 0 40px;flex-wrap:wrap
 }
-
 .filter button{
-  padding:12px 26px;
-  border-radius:30px;
-  border:none;
-  cursor:pointer;
-  font-weight:500;
-  background:#ddd;
-  transition:.3s;
+  padding:12px 28px;border-radius:24px;border:none;
+  background:#ddd;font-weight:500;cursor:pointer
 }
-
-.filter button:hover{
-  background:#ccc;
-}
-
-.filter button.active{
-  background:var(--orange);
-  color:#fff;
-}
-
-.filter button:focus{
-  outline:none;
-  box-shadow:0 0 0 3px rgba(255,122,0,.4);
-}
+.filter button.active{background:var(--orange);color:#fff}
 
 /* SECTION */
 section{
-  max-width:1400px;
-  margin:70px auto;
-  padding:60px 35px;
-  background:rgba(255,255,255,.75);
-  backdrop-filter:blur(20px);
-  border-radius:50px;
-  box-shadow:0 40px 90px rgba(0,0,0,.15);
+  max-width:1400px;margin:0 auto 80px;
+  padding:60px 32px;background:#fff;
+  border-radius:32px;box-shadow:0 30px 70px rgba(0,0,0,.12)
 }
+section h2{text-align:center;margin-bottom:50px}
 
 /* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:32px;
+  gap:30px
 }
 
 /* CARD */
 .card{
-  background:rgba(255,255,255,.95);
-  border-radius:32px;
-  padding:26px;
-  text-align:center;
-  box-shadow:0 25px 50px rgba(0,0,0,.15);
-  transform:translateY(40px);
-  opacity:0;
-  transition:.6s ease, transform .3s ease;
+  background:#fff;border-radius:24px;padding:26px;
+  text-align:center;box-shadow:0 18px 40px rgba(0,0,0,.12);
+  opacity:0;transform:translateY(20px);transition:.4s
 }
-
-.card.show{
-  transform:translateY(0);
-  opacity:1;
+.card.show{opacity:1;transform:none}
+.badge{
+  font-size:12px;padding:6px 14px;border-radius:20px;
+  background:#eee;display:inline-block;margin-bottom:10px
 }
-
-.card:hover{
-  transform:translateY(-14px) scale(1.03);
-}
-
-/* TEXT */
-.model{font-size:18px;font-weight:600;margin-bottom:8px}
-.price{font-size:22px;font-weight:600;color:var(--green)}
-.installments{font-size:14px;color:#555;margin:10px 0}
-
-/* BUTTON */
+.model{font-size:16px;font-weight:600}
+.price{font-size:20px;font-weight:600;color:var(--green);margin-top:6px}
+.installments{font-size:13px;color:#555;margin:10px 0}
 .buy{
-  display:inline-block;
-  margin-top:10px;
-  padding:12px 28px;
-  border-radius:30px;
-  background:var(--orange);
-  color:#fff;
-  text-decoration:none;
-  font-weight:500;
-  transition:.3s;
-}
-
-.buy:hover{
-  background:#e06500;
+  display:inline-block;margin-top:10px;
+  padding:12px 28px;border-radius:26px;
+  background:var(--orange);color:#fff;
+  text-decoration:none;font-weight:500
 }
 
 /* FOOTER */
-footer{
-  margin:90px 0 40px;
-  text-align:center;
-  color:#555;
-}
-
-.social{
-  margin-top:18px;
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap: wrap;
-}
-
-.social a{
-  padding:12px 24px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:500;
-  transition:.3s;
-}
-
-.instagram{background:#e1306c;color:#fff}
-.instagram:hover{opacity:.9}
-.whatsapp-footer{background:var(--green);color:#fff}
-.whatsapp-footer:hover{opacity:.9}
-
-/* FLOAT WHATSAPP */
+footer{text-align:center;color:#555;margin-bottom:40px}
 .whatsapp-float{
-  position:fixed;
-  right:25px;
-  bottom:25px;
-  background:var(--green);
-  color:#fff;
-  padding:18px 28px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:500;
-  box-shadow:0 20px 40px rgba(0,0,0,.35);
-  z-index:30;
-  transition:.3s;
+  position:fixed;right:22px;bottom:22px;
+  background:var(--green);color:#fff;
+  padding:16px 24px;border-radius:40px;
+  text-decoration:none;font-weight:500
 }
-
-.whatsapp-float:hover{opacity:.9}
-
 </style>
 </head>
 
 <body>
 
 <header>
-<h1><span class="power">Power</span> <span class="tec">Tec</span></h1>
-<p>iPhones Originais • Maricá - RJ</p>
+  <h1>Power <span class="tec">Tec</span></h1>
+  <p>iPhones Originais • Maricá - RJ</p>
 </header>
 
 <div class="filter">
-<button class="active" onclick="filterCards('all', this)">Todos</button>
-<button onclick="filterCards('seminovo', this)">Seminovos</button>
-<button onclick="filterCards('lacrado', this)">Lacrados</button>
+  <button class="active" onclick="render('all',this)">Todos</button>
+  <button onclick="render('seminovo',this)">Seminovos</button>
+  <button onclick="render('lacrado',this)">Lacrados</button>
 </div>
 
 <section>
-<div class="grid">
-
-<div class="card seminovo">
-  <div class="model">iPhone 11 64GB</div>
-  <div class="price">R$1.490 à vista</div>
-  <div class="installments">12x R$149,73<br>18x R$104,23</div>
-  <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2011%2064GB%20seminovo">Comprar</a>
-</div>
-
-<div class="card lacrado">
-  <div class="model">iPhone 13 128GB</div>
-  <div class="price">R$3.390 à vista</div>
-  <div class="installments">12x R$328,64<br>18x R$228,79</div>
-  <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20iPhone%2013%20128GB%20lacrado">Comprar</a>
-</div>
-
-</div>
+<h2>Modelos disponíveis</h2>
+<div class="grid" id="grid"></div>
 </section>
 
 <footer>
 <p>📍 Maricá - RJ</p>
 <p>📞 (21) 96729-6969</p>
-
-<div class="social">
-<a class="instagram" href="https://www.instagram.com/_powertec?igsh=Y2poNm01dmNuZ2Jj" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
-<a class="whatsapp-footer" href="https://wa.me/5521967296969">💬 WhatsApp</a>
-</div>
-
-<p style="margin-top:15px;">© Power Tec</p>
+<p>© Power Tec</p>
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/5521967296969">💬 WhatsApp</a>
 
 <script>
-const cards = document.querySelectorAll('.card');
+const products = [
+/* ===== SEMINOVOS ===== */
+["seminovo","iPhone 11 64GB","1.490","149,73","104,23"],
+["seminovo","iPhone 11 128GB","1.690","168,56","117,34"],
+["seminovo","iPhone 11 Pro 64GB","1.690","168,56","117,34"],
+["seminovo","iPhone 11 Pro 256GB","1.990","196,81","137,01"],
+["seminovo","iPhone 11 Pro Max 64GB","2.090","206,23","143,57"],
+["seminovo","iPhone 11 Pro Max 256GB","2.290","225,06","156,68"],
+["seminovo","iPhone 12 64GB","1.990","206,23","143,57"],
+["seminovo","iPhone 12 128GB","2.190","215,64","150,12"],
+["seminovo","iPhone 12 Pro 128GB","2.490","243,89","169,79"],
+["seminovo","iPhone 12 Pro 256GB","2.790","272,14","189,46"],
+["seminovo","iPhone 12 Pro Max 128GB","2.990","300,39","209,12"],
+["seminovo","iPhone 12 Pro Max 256GB","3.090","300,39","209,12"],
+["seminovo","iPhone 13 128GB","2.490","243,89","169,79"],
+["seminovo","iPhone 13 Pro 128GB","3.190","309,81","215,68"],
+["seminovo","iPhone 13 Pro 256GB","3.390","328,64","228,79"],
+["seminovo","iPhone 13 Pro Max 128GB","3.590","347,48","241,90"],
+["seminovo","iPhone 13 Pro Max 256GB","3.890","375,73","261,57"],
+["seminovo","iPhone 14 128GB","2.890","281,56","196,01"],
+["seminovo","iPhone 14 Pro 128GB","3.890","375,73","261,57"],
+["seminovo","iPhone 14 Pro 256GB","4.090","394,56","274,68"],
+["seminovo","iPhone 14 Pro Max 128GB","4.390","422,81","294,34"],
+["seminovo","iPhone 14 Pro Max 256GB","4.590","441,64","307,46"],
+["seminovo","iPhone 15 128GB","3.790","366,31","255,01"],
+["seminovo","iPhone 15 Pro 128GB","4.790","460,48","320,57"],
+["seminovo","iPhone 15 Pro 256GB","4.990","479,31","333,68"],
+["seminovo","iPhone 15 Pro 512GB","5.290","507,56","353,34"],
+["seminovo","iPhone 15 Pro Max 256GB","5.190","498,14","346,79"],
+["seminovo","iPhone 15 Pro Max 512GB","5.590","535,81","373,01"],
+["seminovo","iPhone 16 128GB","4.390","422,81","294,34"],
+["seminovo","iPhone 16 Pro 128GB","6.190","592,31","412,34"],
+["seminovo","iPhone 16 Pro Max 256GB","6.490","620,56","432,01"],
+["seminovo","iPhone 16 Pro Max 512GB","6.990","667,64","464,79"],
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if(e.isIntersecting) e.target.classList.add('show');
-  });
-}, { threshold: 0.2 });
+/* ===== LACRADOS ===== */
+["lacrado","iPhone 13 128GB","3.390","328,64","228,79"],
+["lacrado","iPhone 14 128GB","3.890","375,75","261,57"],
+["lacrado","iPhone 15 128GB","4.290","413,39","287,79"],
+["lacrado","iPhone 16 128GB","5.090","484,39","340,50"],
+["lacrado","iPhone 16 256GB","5.790","554,64","386,12"],
+["lacrado","iPhone 17 256GB","6.890","652,40","459,90"],
+["lacrado","iPhone 17 Pro 256GB","8.590","818,31","569,68"],
+["lacrado","iPhone 17 Pro Max 256GB","9.790","931,31","648,34"]
+];
 
-cards.forEach(card => observer.observe(card));
+const grid=document.getElementById("grid");
+const observer=new IntersectionObserver(e=>e.forEach(i=>i.isIntersecting&&i.target.classList.add("show")),{threshold:.15});
 
-function filterCards(type, btn){
-  document.querySelectorAll('.filter button').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-
-  cards.forEach(card => {
-    if(type === 'all' || card.classList.contains(type)){
-      card.style.display = 'block';
-      card.classList.remove('show');
-      observer.observe(card);
-    } else {
-      card.style.display = 'none';
-      observer.unobserve(card);
-    }
+function render(type,btn){
+  document.querySelectorAll(".filter button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  grid.innerHTML="";
+  products.filter(p=>type==="all"||p[0]===type).forEach(p=>{
+    const c=document.createElement("div");
+    c.className="card";
+    c.innerHTML=`
+      <div class="badge">${p[0]}</div>
+      <div class="model">${p[1]}</div>
+      <div class="price">R$ ${p[2]} à vista</div>
+      <div class="installments">12x R$${p[3]} • 18x R$${p[4]}</div>
+      <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20${encodeURIComponent(p[1])}">Comprar</a>`;
+    grid.appendChild(c);observer.observe(c);
   });
 }
-
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  if(window.scrollY > 50){
-    header.style.padding = '10px 20px';
-    header.querySelector('h1').style.fontSize = '24px';
-    header.querySelector('p').style.fontSize = '12px';
-    header.querySelector('p').style.marginTop = '3px';
-  } else {
-    header.style.padding = '20px 20px';
-    header.querySelector('h1').style.fontSize = '32px';
-    header.querySelector('p').style.fontSize = '14px';
-    header.querySelector('p').style.marginTop = '5px';
-  }
-});
+render("all",document.querySelector(".filter button"));
 </script>
 
 </body>
