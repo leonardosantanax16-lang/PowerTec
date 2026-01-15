@@ -4,88 +4,236 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Power Tec | iPhones Originais em Maricá</title>
-<meta name="description" content="Power Tec - iPhones originais seminovos e lacrados em Maricá RJ. Aceitamos seu seminovo como entrada.">
+<title>Power Tec | iPhones Originais em Maricá RJ</title>
+<meta name="description" content="Power Tec - Loja física em Maricá RJ. iPhones originais seminovos e lacrados. +7 anos no mercado, entrega rápida em todo RJ e aceitamos seu iPhone como entrada.">
+
+<meta name="geo.region" content="BR-RJ">
+<meta name="geo.placename" content="Maricá">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+
+<style>
+:root{
+  --orange:#ff7a00;
+  --green:#1fa84f;
+  --gray:#f5f5f7;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:var(--gray);color:#111}
+
+/* HEADER */
+header{
+  background:#000;
+  color:#fff;
+  padding:110px 20px 90px;
+  text-align:center;
+}
+header h1{font-size:52px}
+header span{color:var(--orange)}
+header p{opacity:.85;margin:10px 0}
+
+.top-actions{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.top-actions a{
+  background:var(--orange);
+  padding:16px 36px;
+  border-radius:50px;
+  color:#fff;
+  text-decoration:none;
+}
+
+/* TRUST */
+.trust{
+  display:flex;
+  justify-content:center;
+  gap:26px;
+  flex-wrap:wrap;
+  margin-top:40px;
+  font-size:13px;
+}
+.trust div i{color:var(--orange);margin-right:6px}
+
+/* SECTION */
+section{
+  max-width:1400px;
+  margin:80px auto;
+  padding:0 24px;
+}
+section h2{text-align:center;margin-bottom:40px}
+
+/* WHY */
+.why{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+.why div{
+  background:#fff;
+  padding:36px;
+  border-radius:30px;
+  text-align:center;
+}
+.why i{font-size:26px;color:var(--orange);margin-bottom:14px}
+
+/* FILTER */
+.filter{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin-bottom:40px;
+}
+.filter button{
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+}
+.filter .active{background:var(--orange);color:#fff}
+
+/* PRODUCTS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+.card{
+  background:#fff;
+  padding:26px;
+  border-radius:26px;
+  text-align:center;
+}
+.badge{
+  font-size:12px;
+  background:#eee;
+  padding:6px 14px;
+  border-radius:20px;
+}
+.model{font-weight:600;margin-top:10px}
+.colors{
+  font-size:12px;
+  color:#666;
+  margin:6px 0;
+}
+.price{color:var(--green);font-weight:600;margin:10px 0}
+.installments{font-size:13px;color:#555}
+.buy{
+  display:inline-block;
+  background:var(--orange);
+  color:#fff;
+  padding:12px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  margin-top:14px;
+}
+
+/* MAP */
+.map{
+  background:#fff;
+  padding:40px;
+  border-radius:30px;
+}
+.map iframe{
+  width:100%;
+  height:380px;
+  border:0;
+  border-radius:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  color:#555;
+  padding:40px 20px;
+}
+
+/* WHATS */
+.whats{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:var(--green);
+  color:#fff;
+  padding:14px 24px;
+  border-radius:50px;
+  text-decoration:none;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="header-bg">
-    <span style="left:10%;animation-duration:18s">🍎</span>
-    <span style="left:30%;animation-duration:22s">🍎</span>
-    <span style="left:50%;animation-duration:26s"><i class="fa-brands fa-apple"></i></span>
-    <span style="left:70%;animation-duration:20s">🍎</span>
+  <h1>Power <span>Tec</span></h1>
+  <p>iPhones Originais • Loja Física em Maricá RJ</p>
+
+  <div class="top-actions">
+    <a href="#trade">Aceitamos seu iPhone como entrada</a>
+    <a href="https://www.instagram.com/_powertec" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
   </div>
 
-  <h1>Power <span class="tec">Tec</span></h1>
-  <p>iPhones Originais • Maricá - RJ</p>
-  <a class="insta" href="https://www.instagram.com/_powertec?igsh=Y2poNm01dmNuZ2Jj" target="_blank">
-    <i class="fa-brands fa-instagram"></i> @_powertec
-  </a>
+  <div class="trust">
+    <div><i class="fa-solid fa-store"></i> Loja física</div>
+    <div><i class="fa-solid fa-medal"></i> +7 anos no mercado</div>
+    <div><i class="fa-solid fa-truck-fast"></i> Entrega rápida RJ</div>
+    <div><i class="fa-solid fa-shield-halved"></i> Compra segura</div>
+  </div>
 </header>
 
+<!-- WHY -->
 <section>
   <h2>Por que comprar na Power Tec?</h2>
-  <div class="why-grid">
-    <div class="why-item"><i class="fa-solid fa-medal"></i><h3>+7 anos no mercado</h3><p>Experiência e credibilidade.</p></div>
-    <div class="why-item"><i class="fa-solid fa-truck-fast"></i><h3>Entrega ágil</h3><p>Receba rápido e com segurança.</p></div>
-    <div class="why-item"><i class="fa-solid fa-map-location-dot"></i><h3>Todo RJ</h3><p>Atendemos todo o estado.</p></div>
-    <div class="why-item"><i class="fa-solid fa-shield-halved"></i><h3>Originais</h3><p>Procedência garantida.</p></div>
+  <div class="why">
+    <div><i class="fa-solid fa-check"></i><p>Aparelhos 100% originais</p></div>
+    <div><i class="fa-solid fa-award"></i><p>Mais de 7 anos no mercado</p></div>
+    <div><i class="fa-solid fa-headset"></i><p>Atendimento humanizado</p></div>
+    <div><i class="fa-solid fa-map-location-dot"></i><p>Atendemos todo RJ</p></div>
   </div>
 </section>
 
-<section class="tradein-call">
-  <h2>Aceitamos seu seminovo como entrada</h2>
-  <p>Use seu iPhone atual como parte do pagamento.</p>
-  <button onclick="openTradein()">Avaliar meu iPhone</button>
-</section>
-
+<!-- PRODUCTS -->
 <section>
+  <h2>Modelos disponíveis</h2>
+
   <div class="filter">
     <button class="active" onclick="render('all',this)">Todos</button>
     <button onclick="render('seminovo',this)">Seminovos</button>
     <button onclick="render('lacrado',this)">Lacrados</button>
   </div>
+
   <div class="grid" id="grid"></div>
 </section>
 
-<section id="tradein">
-  <h2>Avaliação do seu iPhone</h2>
-  <div class="alert" id="alert">❌ Não aceitamos aparelhos com peças trocadas ou recondicionados.</div>
-
-  <label>Possui alguma peça trocada?</label>
-  <select id="peca" onchange="checkPeca()">
-    <option></option>
-    <option>Sim</option>
-    <option>Não</option>
-  </select>
-
-  <div id="questions">
-    <label>Modelo</label><input id="modeloAtual">
-    <label>Cor</label><input id="cor">
-    <label>Memória</label><input id="memoria">
-    <label>Saúde da bateria</label><input id="bateria">
-    <label>Possui algo quebrado?</label>
-    <select id="quebrado"><option>Não</option><option>Sim</option></select>
-    <label>Modelo de interesse</label><input id="interesse">
-    <button onclick="sendWhats()">Enviar para WhatsApp</button>
+<!-- MAP -->
+<section>
+  <h2>Nossa loja</h2>
+  <div class="map">
+    <p style="text-align:center;margin-bottom:20px">
+      Avenida Vereador Francisco Sabino da Costa, 129 – Maricá RJ<br>
+      CEP 24900-100
+    </p>
+    <iframe src="https://www.google.com/maps?q=Avenida%20Vereador%20Francisco%20Sabino%20da%20Costa%20129%20Maric%C3%A1&output=embed"></iframe>
   </div>
 </section>
 
 <footer>
-  <p>📍 Maricá - RJ • © Power Tec</p>
+  <p>📍 Maricá - RJ</p>
+  <p>📞 (21) 96729-6969</p>
+  <p>© Power Tec</p>
 </footer>
 
 <a class="whats" href="https://wa.me/5521967296969">WhatsApp</a>
 
 <script>
 const products = [
-/* ===== SEMINOVOS ===== */
+/* SEMINOVOS */
 ["seminovo","iPhone 11 64GB","1.490","149,73","104,23"],
 ["seminovo","iPhone 11 128GB","1.690","168,56","117,34"],
 ["seminovo","iPhone 11 Pro 64GB","1.690","168,56","117,34"],
@@ -119,7 +267,7 @@ const products = [
 ["seminovo","iPhone 16 Pro Max 256GB","6.490","620,56","432,01"],
 ["seminovo","iPhone 16 Pro Max 512GB","6.990","667,64","464,79"],
 
-/* ===== LACRADOS ===== */
+/* LACRADOS */
 ["lacrado","iPhone 13 128GB","3.390","328,64","228,79"],
 ["lacrado","iPhone 14 128GB","3.890","375,75","261,57"],
 ["lacrado","iPhone 15 128GB","4.290","413,39","287,79"],
@@ -130,49 +278,27 @@ const products = [
 ["lacrado","iPhone 17 Pro Max 256GB","9.790","931,31","648,34"]
 ];
 
-const grid = document.getElementById("grid");
+const grid=document.getElementById("grid");
 
 function render(type,btn){
   document.querySelectorAll(".filter button").forEach(b=>b.classList.remove("active"));
   btn.classList.add("active");
-  grid.innerHTML = "";
-  products.filter(p => type==="all" || p[0]===type).forEach(p => {
-    grid.innerHTML += `
-    <div class="card">
-      <div class="badge">${p[0]}</div>
-      <div class="model">${p[1]}</div>
-      <div class="colors">
-        <a href="https://wa.me/5521967296969?text=Quais%20cores%20do%20${encodeURIComponent(p[1])}%20estão%20disponíveis?">
-          Consulta cores disponíveis
+  grid.innerHTML="";
+  products.filter(p=>type==="all"||p[0]===type).forEach(p=>{
+    grid.innerHTML+=`
+      <div class="card">
+        <div class="badge">${p[0]}</div>
+        <div class="model">${p[1]}</div>
+        <div class="colors">consulta cores disponíveis</div>
+        <div class="price">R$ ${p[2]} à vista</div>
+        <div class="installments">12x R$${p[3]} • 18x R$${p[4]}</div>
+        <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20${encodeURIComponent(p[1])}">
+          Comprar
         </a>
-      </div>
-      <div class="price">R$ ${p[2]} à vista</div>
-      <div class="installments">12x R$${p[3]} • 18x R$${p[4]}</div>
-      <a class="buy" href="https://wa.me/5521967296969">Comprar</a>
-    </div>`;
+      </div>`;
   });
 }
-
 render("all",document.querySelector(".filter button"));
-
-function openTradein(){
-  tradein.style.display="block";
-  tradein.scrollIntoView({behavior:"smooth"});
-}
-function checkPeca(){
-  if(peca.value==="Sim"){alert.style.display="block";questions.style.display="none";}
-  else{alert.style.display="none";questions.style.display="block";}
-}
-function sendWhats(){
-  const msg = `Avaliação de seminovo - Power Tec
-Modelo: ${modeloAtual.value}
-Cor: ${cor.value}
-Memória: ${memoria.value}
-Bateria: ${bateria.value}
-Quebrado: ${quebrado.value}
-Interesse: ${interesse.value}`;
-  window.open("https://wa.me/5521967296969?text="+encodeURIComponent(msg));
-}
 </script>
 
 </body>
