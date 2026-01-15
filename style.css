@@ -198,12 +198,23 @@ h2{
   margin:6px 0;
 }
 
-/* PREÇO VERDE */
 .price{
-  margin:14px 0;
+  font-size:16px;
   font-weight:600;
-  color:var(--green);
-  font-size:18px;
+  display:flex;
+  justify-content:center;
+  gap:6px;
+}
+
+.price .cash{
+  color:#111; /* preto elegante */
+}
+
+.price .avista{
+  color:#ff7a00; /* laranja premium */
+  font-weight:500;
+}
+
 }
 
 .installments{
