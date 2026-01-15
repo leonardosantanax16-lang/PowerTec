@@ -151,7 +151,10 @@ function render(type,btn){
         <div class="badge">${p[0]}</div>
         <div class="model">${p[1]}</div>
         <div class="colors">consultar cores disponíveis</div>
-        <div class="price">R$ ${p[2]} à vista</div>
+       <div class="price">
+  <span class="cash">R$ ${p[2]}</span>
+  <span class="avista">à vista</span>
+</div>
         <div class="installments">12x R$${p[3]} • 18x R$${p[4]}</div>
         <a class="buy" href="https://wa.me/5521967296969?text=Tenho%20interesse%20no%20${encodeURIComponent(p[1])}">
           Comprar
