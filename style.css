@@ -183,6 +183,12 @@ h2 {
 /* ============================================================ */
 /* CARD STYLING COM TEXTO FLUTUANTE */
 /* ============================================================ */
+<div class="card seminovo">
+  <div class="text-bg"></div> <!-- fundo translúcido -->
+  ...
+</div>
+
+
 .card {
   position: relative;
   overflow: hidden;
