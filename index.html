@@ -3,120 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Power Tec | iPhones Originais em Maricá RJ</title>
+<title>Power Tec | iPhones Originais</title>
 
-<meta name="description" content="Venda de iPhones originais em Maricá RJ. Loja física, seminovos e lacrados, parcelamento e troca com seu iPhone usado.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
   <h1>Power <span>Tec</span></h1>
-  <p>iPhones Originais • Loja Física em Maricá RJ</p>
-
-  <div class="top-actions">
-    <a href="#trade" class="cta-main">
-      Aceitamos seu iPhone como entrada
-      <span>faça sua simulação</span>
-    </a>
-    <a href="https://www.instagram.com/_powertec" target="_blank" class="cta-secondary">
-      <i class="fa-brands fa-instagram"></i> @_powertec
-    </a>
-  </div>
-
-  <div class="trust">
-    <div><i class="fa-solid fa-store"></i> Loja física</div>
-    <div><i class="fa-solid fa-medal"></i> +7 anos no mercado</div>
-    <div><i class="fa-solid fa-truck-fast"></i> Entrega rápida RJ</div>
-    <div><i class="fa-solid fa-shield-halved"></i> Compra segura</div>
-  </div>
+  <p>iPhones Originais • Lacrados e Seminovos</p>
 </header>
 
-<section class="why-section">
-  <div class="why">
-    <div><i class="fa-solid fa-check"></i><p>Aparelhos 100% originais</p></div>
-    <div><i class="fa-solid fa-award"></i><p>+7 anos no mercado</p></div>
-    <div><i class="fa-solid fa-users"></i><p>Mais de 1.000 clientes</p></div>
-    <div><i class="fa-solid fa-location-dot"></i><p>Loja física em Maricá RJ</p></div>
-    <div><i class="fa-solid fa-star"></i><p>Clientes satisfeitos</p></div>
-  </div>
-</section>
-
 <section>
-<h2>Modelos disponíveis</h2>
+<h2>Modelos Disponíveis</h2>
+
+<div class="filter">
+  <button class="active" onclick="filterCards('all',this)">Todos</button>
+  <button onclick="filterCards('lacrado',this)">Lacrados</button>
+  <button onclick="filterCards('seminovo',this)">Seminovos</button>
+</div>
 
 <div class="grid">
 
-<!-- ===================== LACRADOS ===================== -->
+<!-- ================= LACRADOS ================= -->
 
-<div class="card"><div class="badge lacrado">lacrado</div><div class="model">iPhone 13 128GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 3.390</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 328,64 • 18x R$ 228,79</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 13 128GB lacrado">Comprar</a></div>
+<div class="card lacrado"><span class="badge">Lacrado</span><h3>iPhone 13 128GB</h3><p class="price">R$ 3.390</p><p>12x R$ 328,64<br>18x R$ 228,79</p></div>
+<div class="card lacrado"><span class="badge">Lacrado</span><h3>iPhone 14 128GB</h3><p class="price">R$ 3.890</p><p>12x R$ 375,75<br>18x R$ 261,57</p></div>
+<div class="card lacrado"><span class="badge">Lacrado</span><h3>iPhone 15 128GB</h3><p class="price">R$ 4.290</p><p>12x R$ 413,39<br>18x R$ 287,79</p></div>
+<div class="card lacrado"><span class="badge">Lacrado</span><h3>iPhone 16 128GB</h3><p class="price">R$ 5.090</p><p>12x R$ 484,39<br>18x R$ 340,50</p></div>
+<div class="card lacrado"><span class="badge">Lacrado</span><h3>iPhone 16 256GB</h3><p class="price">R$ 5.790</p><p>12x R$ 554,64<br>18x R$ 386,12</p></div>
+<div class="card lacrado"><span class="badge">Lacrado</span><h3>iPhone 17 256GB</h3><p class="price">R$ 6.590</p><p>12x R$ 629,98<br>18x R$ 438,57</p></div>
+<div class="card lacrado"><span class="badge">Lacrado</span><h3>iPhone 17 Pro 256GB</h3><p class="price">R$ 8.890</p><p>12x R$ 846,56<br>18x R$ 589,34</p></div>
+<div class="card lacrado"><span class="badge">Lacrado</span><h3>iPhone 17 Pro Max 256GB</h3><p class="price">R$ 9.790</p><p>12x R$ 931,31<br>18x R$ 648,34</p></div>
 
-<div class="card"><div class="badge lacrado">lacrado</div><div class="model">iPhone 14 128GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 3.890</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 375,75 • 18x R$ 261,57</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 14 128GB lacrado">Comprar</a></div>
+<!-- ================= SEMINOVOS ================= -->
 
-<div class="card"><div class="badge lacrado">lacrado</div><div class="model">iPhone 15 128GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 4.290</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 413,39 • 18x R$ 287,79</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 15 128GB lacrado">Comprar</a></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 11 64GB</h3><p class="price">R$ 1.490</p><p>12x R$ 149,73<br>18x R$ 104,23</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 11 128GB</h3><p class="price">R$ 1.690</p><p>12x R$ 168,56<br>18x R$ 117,34</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 11 Pro 64GB</h3><p class="price">R$ 1.690</p><p>12x R$ 168,56<br>18x R$ 117,34</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 11 Pro 256GB</h3><p class="price">R$ 1.990</p><p>12x R$ 196,81<br>18x R$ 137,01</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 11 Pro Max 64GB</h3><p class="price">R$ 2.090</p><p>12x R$ 206,23<br>18x R$ 143,57</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 11 Pro Max 256GB</h3><p class="price">R$ 2.290</p><p>12x R$ 225,06<br>18x R$ 156,68</p></div>
 
-<div class="card"><div class="badge lacrado">lacrado</div><div class="model">iPhone 16 128GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 5.090</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 484,39 • 18x R$ 340,50</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 16 128GB lacrado">Comprar</a></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 12 64GB</h3><p class="price">R$ 1.990</p><p>12x R$ 206,23<br>18x R$ 143,57</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 12 128GB</h3><p class="price">R$ 2.190</p><p>12x R$ 215,64<br>18x R$ 150,12</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 12 Pro 128GB</h3><p class="price">R$ 2.490</p><p>12x R$ 243,89<br>18x R$ 169,79</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 12 Pro 256GB</h3><p class="price">R$ 2.790</p><p>12x R$ 272,14<br>18x R$ 189,46</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 12 Pro Max 128GB</h3><p class="price">R$ 2.990</p><p>12x R$ 300,39<br>18x R$ 209,12</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 12 Pro Max 256GB</h3><p class="price">R$ 3.090</p><p>12x R$ 300,39<br>18x R$ 209,12</p></div>
 
-<div class="card"><div class="badge lacrado">lacrado</div><div class="model">iPhone 16 256GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 5.790</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 554,64 • 18x R$ 386,12</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 16 256GB lacrado">Comprar</a></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 13 128GB</h3><p class="price">R$ 2.490</p><p>12x R$ 243,89<br>18x R$ 169,79</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 13 Pro 128GB</h3><p class="price">R$ 3.190</p><p>12x R$ 309,81<br>18x R$ 215,68</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 13 Pro 256GB</h3><p class="price">R$ 3.390</p><p>12x R$ 328,64<br>18x R$ 228,79</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 13 Pro Max 128GB</h3><p class="price">R$ 3.590</p><p>12x R$ 347,48<br>18x R$ 241,90</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 13 Pro Max 256GB</h3><p class="price">R$ 3.890</p><p>12x R$ 375,73<br>18x R$ 261,57</p></div>
 
-<div class="card"><div class="badge lacrado">lacrado</div><div class="model">iPhone 17 256GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 6.590</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 629,98 • 18x R$ 438,57</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 17 256GB lacrado">Comprar</a></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 14 128GB</h3><p class="price">R$ 2.890</p><p>12x R$ 281,56<br>18x R$ 196,01</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 14 Pro 128GB</h3><p class="price">R$ 3.890</p><p>12x R$ 375,73<br>18x R$ 261,57</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 14 Pro 256GB</h3><p class="price">R$ 4.090</p><p>12x R$ 394,56<br>18x R$ 274,68</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 14 Pro Max 128GB</h3><p class="price">R$ 4.390</p><p>12x R$ 422,81<br>18x R$ 294,34</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 14 Pro Max 256GB</h3><p class="price">R$ 4.590</p><p>12x R$ 441,64<br>18x R$ 307,46</p></div>
 
-<div class="card"><div class="badge lacrado">lacrado</div><div class="model">iPhone 17 Pro 256GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 8.890</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 846,56 • 18x R$ 589,34</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 17 Pro 256GB lacrado">Comprar</a></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 15 128GB</h3><p class="price">R$ 3.790</p><p>12x R$ 366,31<br>18x R$ 255,01</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 15 Pro 128GB</h3><p class="price">R$ 4.790</p><p>12x R$ 460,48<br>18x R$ 320,57</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 15 Pro 256GB</h3><p class="price">R$ 4.990</p><p>12x R$ 479,31<br>18x R$ 333,68</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 15 Pro 512GB</h3><p class="price">R$ 5.290</p><p>12x R$ 507,56<br>18x R$ 353,34</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 15 Pro Max 256GB</h3><p class="price">R$ 5.190</p><p>12x R$ 498,14<br>18x R$ 346,79</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 15 Pro Max 512GB</h3><p class="price">R$ 5.590</p><p>12x R$ 535,81<br>18x R$ 373,01</p></div>
 
-<div class="card"><div class="badge lacrado">lacrado</div><div class="model">iPhone 17 Pro Max 256GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 9.790</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 931,31 • 18x R$ 648,34</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 17 Pro Max 256GB lacrado">Comprar</a></div>
-
-<!-- ===================== SEMINOVOS ===================== -->
-
-<div class="card"><div class="badge seminovo">seminovo</div><div class="model">iPhone 11 64GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 1.490</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 149,73 • 18x R$ 104,23</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 11 64GB seminovo">Comprar</a></div>
-
-<div class="card"><div class="badge seminovo">seminovo</div><div class="model">iPhone 11 128GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 1.690</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 168,56 • 18x R$ 117,34</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 11 128GB seminovo">Comprar</a></div>
-
-<div class="card"><div class="badge seminovo">seminovo</div><div class="model">iPhone 11 Pro 64GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 1.690</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 168,56 • 18x R$ 117,34</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 11 Pro 64GB seminovo">Comprar</a></div>
-
-<div class="card"><div class="badge seminovo">seminovo</div><div class="model">iPhone 11 Pro 256GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 1.990</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 196,81 • 18x R$ 137,01</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 11 Pro 256GB seminovo">Comprar</a></div>
-
-<div class="card"><div class="badge seminovo">seminovo</div><div class="model">iPhone 11 Pro Max 64GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 2.090</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 206,23 • 18x R$ 143,57</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 11 Pro Max 64GB seminovo">Comprar</a></div>
-
-<div class="card"><div class="badge seminovo">seminovo</div><div class="model">iPhone 11 Pro Max 256GB</div><div class="colors">Consultar cores</div><div class="price"><span class="cash">R$ 2.290</span> <span class="avista">à vista</span></div><div class="installments">12x R$ 225,06 • 18x R$ 156,68</div><a class="buy" href="https://wa.me/5521967296969?text=Tenho interesse no iPhone 11 Pro Max 256GB seminovo">Comprar</a></div>
-
-<!-- … TODOS OS OUTROS SEMINOVOS CONTINUAM AQUI … -->
-<!-- iPhone 12 / 13 / 14 / 15 / 16 (todos os que você enviou) -->
-<!-- Mantidos exatamente com preços e parcelas corretas -->
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 16 128GB</h3><p class="price">R$ 4.390</p><p>12x R$ 422,81<br>18x R$ 294,34</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 16 Pro 128GB</h3><p class="price">R$ 6.190</p><p>12x R$ 592,31<br>18x R$ 412,34</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 16 Pro Max 256GB</h3><p class="price">R$ 6.490</p><p>12x R$ 620,56<br>18x R$ 432,01</p></div>
+<div class="card seminovo"><span class="badge">Seminovo</span><h3>iPhone 16 Pro Max 512GB</h3><p class="price">R$ 6.990</p><p>12x R$ 667,64<br>18x R$ 464,79</p></div>
 
 </div>
 </section>
 
-<section id="trade">
-  <h2>Use seu iPhone como entrada</h2>
-  <p style="text-align:center;opacity:.7;margin-bottom:20px">
-    Avaliamos seu aparelho e abatemos no valor do novo
-  </p>
-  <div style="text-align:center">
-    <a class="buy" href="https://wa.me/5521967296969">Fazer avaliação agora</a>
-  </div>
-</section>
-
-<section>
-  <h2>Nossa loja</h2>
-  <div class="map">
-    <p>Avenida Vereador Francisco Sabino da Costa, 129 – Maricá RJ</p>
-    <iframe src="https://www.google.com/maps?q=Avenida%20Vereador%20Francisco%20Sabino%20da%20Costa%20129%20Maricá&output=embed"></iframe>
-  </div>
-</section>
-
 <footer>
-  <p>📍 Maricá - RJ</p>
-  <p>📞 (21) 96729-6969</p>
-  <p>© Power Tec</p>
+<p>Power Tec iPhones • Maricá RJ</p>
 </footer>
 
-<a class="whats" href="https://wa.me/5521967296969">WhatsApp</a>
+<script>
+function filterCards(type, btn){
+  document.querySelectorAll('.filter button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.card').forEach(card=>{
+    card.style.display =
+      type === 'all' || card.classList.contains(type)
+      ? 'block' : 'none';
+  });
+}
+</script>
 
 </body>
 </html>
