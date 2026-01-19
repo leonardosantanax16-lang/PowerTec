@@ -3,7 +3,7 @@
   --gray:#f5f5f7;
   --dark:#1c1c1e;
   --accent:#ff7a00;
-  --wpp:#25D366;
+  --green:#25D366;
 }
 
 /* Reset */
@@ -44,29 +44,28 @@ body{
 }
 
 .hero-actions{
+  margin-top:40px;
   display:flex;
   justify-content:center;
   gap:20px;
-  flex-wrap:wrap;
-  margin-top:40px;
 }
 
-/* Botões Hero */
 .btn-wpp, .btn-insta{
   display:flex;
   align-items:center;
-  gap:10px;
-  padding:14px 28px;
+  justify-content:center;
+  gap:8px;
+  padding:12px 24px;
   border-radius:50px;
   font-weight:500;
-  font-size:16px;
   text-decoration:none;
-  transition:0.3s;
-  color:#fff;
+  transition:.3s;
+  font-size:16px;
 }
 
 .btn-wpp{
-  background:var(--wpp);
+  background:var(--green);
+  color:#fff;
 }
 
 .btn-wpp:hover{
@@ -74,27 +73,20 @@ body{
 }
 
 .btn-insta{
-  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background:#fff;
+  border:1px solid #ddd;
+  color:var(--black);
 }
 
 .btn-insta:hover{
-  opacity:0.9;
+  color:var(--accent);
 }
 
 .icon-btn{
-  width:24px;
-  height:24px;
+  width:20px;
+  height:20px;
 }
 
-/* Social Proof */
-.social-proof{
-  text-align:center;
-  font-size:18px;
-  margin-top:30px;
-  opacity:0.85;
-}
-
-/* Hero trust (informações de loja) */
 .hero-trust{
   margin-top:32px;
   display:flex;
@@ -102,6 +94,16 @@ body{
   gap:22px;
   font-size:14px;
   opacity:.7;
+  flex-wrap:wrap;
+}
+
+.social-proof{
+  margin-top:24px;
+  font-size:18px;
+  font-weight:500;
+  line-height:1.5;
+  text-align:center;
+  color:var(--black);
 }
 
 /* FILTER */
@@ -137,12 +139,14 @@ body{
   gap:32px;
 }
 
+/* CARD */
 .card{
   background:#fff;
   padding:32px;
   border-radius:28px;
   transition:.3s;
   position:relative;
+  text-align:center;
 }
 
 .card:hover{
@@ -165,18 +169,32 @@ body{
 .card p{
   font-size:22px;
   font-weight:600;
-  margin-bottom:12px;
 }
 
-/* Botão Comprar Agora nos cards */
+.card span{
+  display:block;
+  margin-top:8px;
+  font-size:13px;
+  opacity:.6;
+}
+
+.card .warranty{
+  margin-top:12px;
+  font-size:14px;
+  opacity:.7;
+  color:#555;
+}
+
+/* BOTÃO COMPRAR NOS CARDS */
 .btn-buy{
   display:inline-block;
-  background:var(--wpp);
-  color:#fff;
+  margin-top:16px;
   padding:12px 24px;
-  border-radius:30px;
-  font-weight:500;
+  background:var(--green);
+  color:#fff;
+  border-radius:50px;
   text-decoration:none;
+  font-weight:600;
   transition:.3s;
 }
 
@@ -184,7 +202,7 @@ body{
   background:#1ebe5d;
 }
 
-/* TRADE-IN */
+/* TRADE-IN / AVALIAÇÃO */
 .tradein{
   background:linear-gradient(135deg,#fff8f0,#ff7a00);
   text-align:center;
@@ -205,53 +223,54 @@ body{
   margin-bottom:24px;
 }
 
-/* FOOTER */
-.footer{
-  background:var(--black);
-  color:#fff;
-  text-align:center;
-  padding:40px 20px;
+.tradein form input, .tradein form textarea, .tradein form select{
+  width:80%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #ddd;
+  margin-bottom:12px;
+  font-size:16px;
 }
 
-.footer a{
-  color:var(--accent);
-  text-decoration:none;
+.tradein form textarea{
+  resize:none;
+  height:100px;
 }
 
-.footer a:hover{
-  text-decoration:underline;
-}
-
-.footer span{
-  display:block;
-  margin-top:6px;
-  opacity:.6;
+.tradein form button{
+  cursor:pointer;
 }
 
 /* BOTÃO FLUTUANTE WHATSAPP */
-.whatsapp-float{
+.btn-floating-wpp{
   position:fixed;
-  bottom:20px;
-  right:20px;
+  bottom:24px;
+  right:24px;
+  background:var(--green);
   width:60px;
   height:60px;
-  background:var(--wpp);
   border-radius:50%;
   display:flex;
   justify-content:center;
   align-items:center;
-  box-shadow:0 8px 20px rgba(0,0,0,.3);
-  z-index:999;
+  box-shadow:0 5px 15px rgba(0,0,0,.3);
+  z-index:1000;
+  font-size:28px;
+  color:#fff;
+  text-decoration:none;
   transition:.3s;
 }
 
-.whatsapp-float:hover{
-  transform:translateY(-4px);
+.btn-floating-wpp:hover{
+  background:#1ebe5d;
 }
 
-.whatsapp-float img{
-  width:32px;
-  height:32px;
+/* FOOTER */
+footer{
+  background:var(--black);
+  color:#fff;
+  text-align:center;
+  padding:40px 20px;
 }
 
 /* RESPONSIVIDADE */
@@ -259,6 +278,11 @@ body{
   .hero-actions{
     flex-direction:column;
     gap:16px;
+  }
+
+  .btn-wpp, .btn-insta{
+    width:100%;
+    text-align:center;
   }
 
   .card{
@@ -284,5 +308,9 @@ body{
 
   .footer{
     padding:50px 20px;
+  }
+
+  .tradein form input, .tradein form textarea, .tradein form select{
+    width:100%;
   }
 }
