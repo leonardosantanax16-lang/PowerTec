@@ -1,236 +1,47 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',system-ui,-apple-system,sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
+body{background:#f5f5f7;color:#111}
+.tec{color:#ff7a00}
 
-body{
-  background:#f5f5f7;
-  color:#111;
-  -webkit-font-smoothing:antialiased;
-}
+.hero{background:#000;color:#fff;text-align:center;padding:90px 20px}
+.hero p{margin-top:12px;color:#a1a1a6}
+.hero-actions{margin-top:30px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-social{display:flex;gap:10px;align-items:center;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:500;transition:.25s}
+.btn-social img{width:20px}
+.whatsapp{background:#25D366;color:#000}
+.instagram{background:#111;border:1px solid #2c2c2e;color:#fff}
+.btn-social:hover{transform:translateY(-2px)}
 
-/* HERO */
-.hero{
-  background:#000;
-  color:#fff;
-  text-align:center;
-  padding:90px 20px;
-}
+.hero-trust{margin-top:30px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;font-size:14px;color:#b5b5b5}
 
-.hero h1{
-  font-size:48px;
-  font-weight:600;
-}
+.filters{display:flex;justify-content:center;gap:14px;margin:50px 20px}
+.filters button{padding:12px 28px;border-radius:30px;border:1px solid #d2d2d7;background:#fff;cursor:pointer}
+.filters .active{background:#000;color:#fff}
 
-.hero h1 span{
-  color:#bfbfbf;
-}
+.product-section{max-width:1400px;margin:0 auto 80px;padding:0 24px}
+.product-section h2{color:#ff7a00;font-size:32px}
+.section-sub{color:#6e6e73;margin-top:6px}
 
-.hero p{
-  margin-top:14px;
-  color:#a1a1a6;
-  font-size:18px;
-}
+.horizontal-scroll{margin-top:30px;display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory}
+.card{background:#fff;padding:26px;border-radius:24px;min-width:260px;scroll-snap-align:start;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.card h3{font-size:18px}
+.card p{font-size:22px;font-weight:600;margin:10px 0}
+.card span{font-size:14px;color:#6e6e73}
 
-.hero-actions{
-  margin-top:36px;
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  flex-wrap:wrap;
-}
+.tag{display:inline-block;background:#ff7a00;color:#fff;padding:4px 10px;border-radius:20px;font-size:12px;margin-bottom:10px}
+.tag.gray{background:#8e8e93}
 
-.btn-social{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:14px 26px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:500;
-  transition:.25s;
-}
+.warranty{display:block;margin-top:8px;color:#515154}
 
-.btn-social img{
-  width:20px;
-  height:20px;
-}
+.tradein{background:#fff;max-width:900px;margin:80px auto;padding:60px 24px;border-radius:32px;text-align:center}
+.tradein p{color:#6e6e73;margin:12px 0 24px}
+.tradein input,.tradein textarea,.tradein select{width:100%;max-width:420px;padding:14px;margin:10px auto;border-radius:14px;border:1px solid #d2d2d7}
+.tradein textarea{resize:none;height:110px}
+.tradein button{margin-top:18px;padding:14px 32px;border-radius:30px;border:none;background:#000;color:#fff;cursor:pointer}
+.tradein button:disabled{opacity:.5;cursor:not-allowed}
+#bloqueioMsg{display:none;color:#c62828;margin-top:10px}
 
-.whatsapp{
-  background:#25D366;
-  color:#000;
-}
-
-.whatsapp:hover{
-  transform:translateY(-2px);
-}
-
-.instagram{
-  background:#111;
-  border:1px solid #2c2c2e;
-  color:#fff;
-}
-
-.instagram:hover{
-  transform:translateY(-2px);
-}
-
-/* FILTERS */
-.filters{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  margin:50px 20px;
-  flex-wrap:wrap;
-}
-
-.filters button{
-  padding:12px 28px;
-  border-radius:30px;
-  border:1px solid #d2d2d7;
-  background:#fff;
-  cursor:pointer;
-  transition:.25s;
-}
-
-.filters .active{
-  background:#000;
-  color:#fff;
-}
-
-/* SECTIONS */
-.product-section{
-  max-width:1400px;
-  margin:0 auto 80px;
-  padding:0 24px;
-}
-
-.product-section h2{
-  font-size:32px;
-  font-weight:600;
-}
-
-.section-sub{
-  margin-top:8px;
-  color:#6e6e73;
-}
-
-/* HORIZONTAL */
-.horizontal-scroll{
-  margin-top:30px;
-  display:flex;
-  gap:24px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  padding-bottom:10px;
-}
-
-.horizontal-scroll::-webkit-scrollbar{
-  height:6px;
-}
-
-.horizontal-scroll::-webkit-scrollbar-thumb{
-  background:#d2d2d7;
-  border-radius:10px;
-}
-
-/* CARD */
-.card{
-  background:#fff;
-  padding:26px;
-  border-radius:24px;
-  min-width:260px;
-  scroll-snap-align:start;
-  transition:.25s;
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 20px 40px rgba(0,0,0,.08);
-}
-
-.card h3{
-  font-size:18px;
-  font-weight:500;
-}
-
-.card p{
-  font-size:22px;
-  font-weight:600;
-  margin:10px 0;
-}
-
-.card span{
-  font-size:14px;
-  color:#6e6e73;
-}
-
-.warranty{
-  display:block;
-  margin-top:10px;
-  font-size:14px;
-  color:#515154;
-}
-
-/* TRADE IN */
-.tradein{
-  background:#fff;
-  max-width:900px;
-  margin:80px auto;
-  padding:60px 24px;
-  border-radius:32px;
-  text-align:center;
-}
-
-.tradein h2{
-  font-size:32px;
-  font-weight:600;
-}
-
-.tradein input,
-.tradein textarea,
-.tradein select{
-  width:100%;
-  max-width:420px;
-  padding:14px;
-  margin:10px auto;
-  border-radius:14px;
-  border:1px solid #d2d2d7;
-  font-size:16px;
-}
-
-.tradein textarea{
-  resize:none;
-  height:110px;
-}
-
-.tradein button{
-  margin-top:18px;
-  padding:14px 32px;
-  border-radius:30px;
-  border:none;
-  background:#000;
-  color:#fff;
-  font-size:16px;
-  cursor:pointer;
-}
-
-.tradein button:disabled{
-  opacity:.5;
-  cursor:not-allowed;
-}
-
-#bloqueio{
-  display:none;
-  margin-top:12px;
-  color:#c62828;
-  font-size:14px;
-}
-
-/* MOBILE */
 @media(max-width:768px){
-  .hero h1{font-size:36px}
-  .product-section h2{font-size:26px}
+.hero h1{font-size:36px}
+.product-section h2{font-size:26px}
 }
