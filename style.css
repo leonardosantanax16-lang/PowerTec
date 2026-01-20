@@ -20,32 +20,11 @@ header {
   padding: 32px 16px;
   text-align: center;
 }
-
-header h1 {
-  font-size: 2.6rem;
-  font-weight: 700;
-}
-
-header h1 span {
-  color: #ff7a00;
-}
-
-header p {
-  margin-top: 8px;
-  color: #ccc;
-  font-size: 1rem;
-}
-
-/* BOTÕES SOCIAIS */
-header a {
-  margin: 0 12px;
-  font-size: 1.8rem;
-  transition: transform 0.2s ease;
-}
-
-header a:hover {
-  transform: scale(1.1);
-}
+header h1 { font-size: 2.6rem; font-weight: 700; }
+header h1 span { color: #ff7a00; }
+header p { margin-top: 8px; color: #ccc; font-size: 1rem; }
+header a { margin: 0 12px; font-size: 1.8rem; transition: transform 0.2s ease; }
+header a:hover { transform: scale(1.1); }
 
 /* FILTROS */
 .filters {
@@ -53,35 +32,37 @@ header a:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
+  margin: 24px 0;
 }
-
 .filter-btn {
   border: none;
   cursor: pointer;
   font-size: 0.95rem;
   font-weight: 500;
-  transition: background 0.2s ease;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #fff;
+  transition: background 0.2s ease, color 0.2s ease;
 }
-
 .filter-btn.active,
 .filter-btn:hover {
   background: #1d1d1f;
+  color: #fff;
 }
 
-/* SEÇÕES */
+/* GRID DE PRODUTOS */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
   padding: 32px;
 }
-
 .grid h2 {
   grid-column: 1 / -1;
   font-size: 1.8rem;
   font-weight: 600;
   color: #ff7a00;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 /* CARD */
@@ -94,41 +75,17 @@ header a:hover {
   flex-direction: column;
   gap: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
-
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 35px rgba(0,0,0,0.1);
 }
-
-/* TEXTO DO CARD */
-.card small {
-  color: #6e6e73;
-  font-weight: 500;
-}
-
-.card h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.card p {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.card span {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* GARANTIA */
-.warranty {
-  margin-top: 4px;
-  font-size: 0.85rem;
-  color: #ff7a00;
-  font-weight: 600;
-}
+.card i { font-size: 2rem; color: #000; }
+.card h3 { font-size: 1.1rem; font-weight: 600; }
+.card p { font-size: 1.2rem; font-weight: 600; }
+.card span { font-size: 0.9rem; color: #555; }
+.card .warranty { font-size: 0.85rem; color: #ff7a00; font-weight: 600; }
 
 /* BOTÃO COMPRAR */
 .btn-buy {
@@ -140,14 +97,10 @@ header a:hover {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 500;
-  transition: background 0.2s ease;
 }
+.btn-buy:hover { background: #1d1d1f; }
 
-.btn-buy:hover {
-  background: #1d1d1f;
-}
-
-/* AVALIAÇÃO */
+/* FORMULÁRIO DE AVALIAÇÃO */
 .tradein {
   background: #fff;
   margin: 40px auto;
@@ -155,40 +108,17 @@ header a:hover {
   max-width: 600px;
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-.tradein h2 {
   text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 12px;
 }
-
-.tradein p {
-  text-align: center;
-  color: #555;
-  margin-bottom: 24px;
-}
-
-/* FORMULÁRIO */
-.tradein form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.tradein select,
-.tradein textarea {
+.tradein h2 { font-size: 1.8rem; margin-bottom: 12px; }
+.tradein form { display: flex; flex-direction: column; gap: 14px; }
+.tradein input, .tradein select, .tradein textarea {
   padding: 12px;
   border-radius: 12px;
   border: 1px solid #ccc;
   font-size: 0.95rem;
 }
-
-.tradein textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
+.tradein textarea { resize: vertical; min-height: 80px; }
 .tradein button {
   background: #000;
   color: #fff;
@@ -198,18 +128,63 @@ header a:hover {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease;
 }
+.tradein button:hover { background: #1d1d1f; }
 
-.tradein button:hover {
-  background: #1d1d1f;
-}
-
-/* MENSAGEM ERRO */
-#tradeinMessage {
+/* DEPOIMENTOS */
+.testimonial-gallery {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
   text-align: center;
-  font-weight: 600;
+  overflow: hidden;
+  position: relative;
 }
+.testimonial-item {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.testimonial-item.active { display: flex; }
+.testimonial-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ff7a00;
+}
+.testimonial-item p {
+  font-style: italic;
+  color: #555;
+  font-size: 1rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.testimonial-item strong {
+  color: #1d1d1f;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* WHATSAPP FLUTUANTE */
+.wpp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  padding: 16px;
+  font-size: 2rem;
+  z-index: 1000;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+.wpp-float:hover { transform: scale(1.1); }
 
 /* FOOTER */
 footer {
@@ -222,12 +197,10 @@ footer {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2.1rem;
-  }
-
-  .grid {
-    padding: 20px;
-    gap: 16px;
-  }
+  header h1 { font-size: 2.1rem; }
+  .grid { padding: 20px; gap: 16px; }
+  .testimonial-gallery { padding: 24px; }
+  .testimonial-item img { width: 100px; height: 100px; }
+  .testimonial-item p { font-size: 0.95rem; }
 }
+
