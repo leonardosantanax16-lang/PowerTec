@@ -1,34 +1,46 @@
-// ================= FILTRO DE PRODUTOS =================
+// ================= FILTRO PREMIUM =================
 const filterButtons = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.card');
+const sections = document.querySelectorAll('[data-section]');
 
 filterButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     filterButtons.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
-    const filter = btn.getAttribute('data-filter');
+    const filter = btn.dataset.filter;
 
-    cards.forEach(card => {
-      if(filter === 'all') {
-        card.style.display = 'flex';
-      } else if(card.classList.contains(filter)) {
-        card.style.display = 'flex';
+    sections.forEach(section => {
+      if (filter === 'all' || section.dataset.section === filter) {
+        section.style.display = 'grid';
       } else {
-        card.style.display = 'none';
+        section.style.display = 'none';
       }
     });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
 
+// ================= FORMULÁRIO → WHATSAPP =================
+document.getElementById('tradeForm').addEventListener('submit', e => {
+  e.preventDefault();
+
+  const fields = [...e.target.elements].filter(el => el.value);
+  let message = 'Avaliação de iPhone:%0A';
+
+  fields.forEach(el => {
+    message += `• ${el.placeholder || el.previousElementSibling?.innerText}: ${el.value}%0A`;
+  });
+
+  window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+});
+
 // ================= CARROSSEL DE DEPOIMENTOS =================
-const testimonialItems = document.querySelectorAll('.testimonial-item');
-let testimonialIndex = 0;
+const testimonials = document.querySelectorAll('.testimonial-item');
+let index = 0;
 
-function nextTestimonial() {
-  testimonialItems[testimonialIndex].classList.remove('active');
-  testimonialIndex = (testimonialIndex + 1) % testimonialItems.length;
-  testimonialItems[testimonialIndex].classList.add('active');
-}
-setInterval(nextTestimonial, 6000);
-
+setInterval(() => {
+  testimonials[index].classList.remove('active');
+  index = (index + 1) % testimonials.length;
+  testimonials[index].classList.add('active');
+}, 6000);
