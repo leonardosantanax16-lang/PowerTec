@@ -1,46 +1,40 @@
-// ================= FILTRO PREMIUM =================
-const filterButtons = document.querySelectorAll('.filter-btn');
+const buttons = document.querySelectorAll('.filter-btn');
 const sections = document.querySelectorAll('[data-section]');
 
-filterButtons.forEach(btn => {
+buttons.forEach(btn => {
   btn.addEventListener('click', () => {
-    filterButtons.forEach(b => b.classList.remove('active'));
+    buttons.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
     const filter = btn.dataset.filter;
 
     sections.forEach(section => {
-      if (filter === 'all' || section.dataset.section === filter) {
-        section.style.display = 'grid';
-      } else {
-        section.style.display = 'none';
-      }
+      section.style.display =
+        filter === 'all' || section.dataset.section === filter
+          ? 'grid'
+          : 'none';
     });
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
 
-// ================= FORMULÁRIO → WHATSAPP =================
-document.getElementById('tradeForm').addEventListener('submit', e => {
-  e.preventDefault();
+const tradeForm = document.getElementById('tradeForm');
 
-  const fields = [...e.target.elements].filter(el => el.value && el.tagName !== 'BUTTON');
-  let message = 'Avaliação de iPhone:%0A';
+if (tradeForm) {
+  tradeForm.addEventListener('submit', e => {
+    e.preventDefault();
 
-  fields.forEach(el => {
-    message += `• ${el.placeholder || el.previousElementSibling?.innerText}: ${el.value}%0A`;
+    let msg = 'Avaliação de iPhone:\n';
+    [...tradeForm.elements].forEach(el => {
+      if (el.placeholder && el.value) {
+        msg += `• ${el.placeholder}: ${el.value}\n`;
+      }
+    });
+
+    window.open(
+      `https://wa.me/5521967296969?text=${encodeURIComponent(msg)}`,
+      '_blank'
+    );
   });
-
-  window.open(`https://wa.me/5521967296969?text=${message}`, '_blank');
-});
-
-// ================= CARROSSEL DE DEPOIMENTOS =================
-const testimonials = document.querySelectorAll('.testimonial-item');
-let index = 0;
-
-setInterval(() => {
-  testimonials[index].classList.remove('active');
-  index = (index + 1) % testimonials.length;
-  testimonials[index].classList.add('active');
-}, 6000);
+}
