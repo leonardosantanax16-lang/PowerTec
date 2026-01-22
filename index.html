@@ -8,83 +8,57 @@
   <meta name="keywords" content="iPhone lacrado, iPhone seminovo, Power Tec, Apple, Maricá">
   <meta name="author" content="Power Tec">
 
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
-    /* ================== RESET & BASE ================== */
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
+    /* RESET */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
     :root { --gold:#ff8c00; --dark:#111; --gray:#f5f5f7; }
     body { background: var(--gray); color:#1d1d1f; }
 
-    /* ================== HEADER ================== */
-    header {
-      background: linear-gradient(180deg, #000, #111);
-      color:#fff; text-align:center; padding:40px 20px;
-    }
+    /* HEADER */
+    header { background: linear-gradient(180deg,#000,#111); color:#fff; text-align:center; padding:40px 20px; }
     header span { color: var(--gold); }
-    .social a { margin:0 8px; color:#fff; font-size:1.5rem; }
+    .social { margin-top:10px; }
+    .social a { color:#fff; margin:0 10px; font-size:1.5rem; }
 
-    /* ================== SELO ================== */
-    .seal {
-      display:flex; align-items:center; gap:14px;
-      background: linear-gradient(135deg, #000, #111);
-      color:#fff; padding:18px 22px;
-      border-radius:18px; max-width:420px; margin:40px auto;
-      box-shadow:0 12px 30px rgba(0,0,0,.2);
-      text-decoration:none;
-    }
-    .seal i { font-size:2.4rem; color: var(--gold); }
-    .seal strong { display:block; font-size:1rem; }
-    .seal span { font-size:.85rem; opacity:.85; }
-
-    /* ================== FILTROS ================== */
+    /* FILTROS */
     .filters { display:flex; justify-content:center; gap:10px; margin:30px; flex-wrap:wrap; }
     .filter-btn { border:1px solid #ddd; padding:12px 22px; border-radius:999px; background:#fff; cursor:pointer; }
     .filter-btn.active { background: var(--gold); color:#fff; }
 
-    /* ================== GRID ================== */
-    .grid {
-      max-width:1200px; margin:auto; padding:30px 20px;
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px;
-    }
-    .grid h2 { grid-column:1/-1; margin-bottom:20px; }
-    .grid h2 span { font-weight:400; font-size:1rem; color:#555; }
+    /* GRID */
+    .grid { max-width:1200px; margin:auto; padding:30px 20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+    .grid h2 { grid-column:1 / -1; }
 
-    /* ================== CARD ================== */
-    .card {
-      background:#fff; padding:24px; border-radius:20px; text-align:center;
-      box-shadow:0 10px 25px rgba(0,0,0,.08); transition:all 0.3s ease;
-    }
-    .card:hover { transform:translateY(-6px); box-shadow:0 15px 30px rgba(0,0,0,.15); }
+    /* CARD */
+    .card { background:#fff; padding:24px; border-radius:20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,.08); transition: transform 0.2s ease; position:relative; }
+    .card:hover { transform: translateY(-5px); }
+    .apple-icon { font-size:3rem; color:#111; transition: color 0.3s ease; margin-bottom:10px; }
+    .card:hover .apple-icon { color: var(--gold); }
 
-    .apple-icon {
-      font-size:2rem; color:#111; margin-bottom:12px;
-      transition: all 0.3s ease; display:block;
-    }
-    .card:hover .apple-icon {
-      color: var(--gold); transform: scale(1.2) rotate(-5deg);
-      text-shadow: 0 0 8px var(--gold),0 0 15px var(--gold);
-    }
+    .price { font-size:1.4rem; color: var(--gold); font-weight:700; }
+    .installments { font-size:0.9rem; color:#333; margin:5px 0; }
 
-    .price { font-size:1.2rem; color:var(--gold); font-weight:700; margin:12px 0; }
-    .installments { font-size:.85rem; color:#333; margin:6px 0; line-height:1.4; }
+    .btn-buy { display:block; margin-top:14px; background: linear-gradient(135deg, #ff8c00, #ffa733); color:#fff; padding:12px; border-radius:999px; text-decoration:none; border:none; cursor:pointer; text-align:center; }
 
-    /* ================== BOTÃO ================== */
-    .btn-buy { display:block; margin-top:14px; background:linear-gradient(135deg, #ff8c00,#ffa733); color:#fff; padding:12px; border-radius:999px; text-decoration:none; }
-
-    /* ================== TRADE-IN ================== */
+    /* TRADEIN */
     .tradein { max-width:600px; background:#fff; margin:60px auto; padding:30px; border-radius:20px; }
+    .tradein h2 { text-align:center; margin-bottom:20px; }
+    .tradein p { margin-bottom:10px; font-weight:600; text-align:center; }
     .tradein form { display:flex; flex-direction:column; gap:12px; }
-    .tradein input, .tradein button { padding:12px; border-radius:8px; border:1px solid #ddd; }
-    .tradein button { background: var(--gold); color:#fff; border:none; cursor:pointer; }
+    .tradein label { font-weight:600; }
+    .tradein input, .tradein select, .tradein button { padding:10px; border-radius:8px; border:1px solid #ccc; font-size:1rem; }
+    .tradein button { background: linear-gradient(135deg, #ff8c00, #ffa733); color:#fff; font-weight:600; cursor:pointer; }
 
-    /* ================== FLOAT WHATS ================== */
-    .wpp-float { position:fixed; bottom:20px; right:20px; background:#25d366; color:#fff; padding:16px; border-radius:50%; font-size:2rem; }
+    /* WhatsApp flutuante */
+    .wpp-float { position: fixed; bottom:20px; right:20px; background:#25d366; color:#fff; padding:16px; border-radius:50%; font-size:2rem; }
 
-    /* ================== MOBILE ================== */
+    /* RESPONSIVO */
     @media(max-width:480px){ .grid{grid-template-columns:1fr;} }
   </style>
 </head>
@@ -99,19 +73,13 @@
   </div>
 </header>
 
-<a href="garantia.html" class="seal">
-  <i class="fas fa-shield-check"></i>
-  <div>
-    <strong>Loja Verificada Power Tec</strong>
-    <span>Há 7 anos no mercado • Garantia • Procedência comprovada</span>
-  </div>
-</a>
-
+<!-- FILTROS -->
 <div class="filters">
   <button class="filter-btn active" data-filter="all">Todos</button>
   <button class="filter-btn" data-filter="lacrado">Lacrados</button>
   <button class="filter-btn" data-filter="seminovo">Seminovos</button>
 </div>
+
 
 <!-- ================== LACRADOS ================== -->
 <section class="grid" data-section="lacrado">
@@ -182,7 +150,7 @@
   </div>
 </section>
 
-<!-- ================== SEMINOVOS ================== -->
+  <!-- ================== SEMINOVOS ================== -->
 <section class="grid" data-section="seminovo">
   <h2>Seminovos <span>ATUALIZADO </span></h2>
  
@@ -450,19 +418,43 @@
   </div>
 
 </section>
-
 </section>
 
-<!-- TRADE-IN -->
-<section class="tradein">
-  <h2>Avalie seu iPhone</h2>
-  <form id="tradeForm">
-    <input required placeholder="Modelo do iPhone">
-    <input required placeholder="Memória">
-    <input required placeholder="Cor">
-    <input required type="number" placeholder="Saúde da bateria (%)">
-    <button type="submit">Enviar avaliação</button>
-  </form>
+
+  <!-- FORMULÁRIO DE AVALIAÇÃO -->
+  <div class="tradein">
+    <h2>Avaliação do iPhone</h2>
+    <p><strong>Aceitamos seu seminovo como entrada!</strong></p>
+    <form id="avaliacaoForm">
+      <label for="modelo">Modelo do iPhone</label>
+      <input type="text" id="modelo" name="modelo" required placeholder="Ex: iPhone 11 Pro">
+
+      <label for="cor">Cor</label>
+      <input type="text" id="cor" name="cor" required placeholder="Ex: Preto">
+
+      <label for="memoria">Memória</label>
+      <select id="memoria" name="memoria" required>
+        <option value="">Selecione</option>
+        <option value="64GB">64GB</option>
+        <option value="128GB">128GB</option>
+        <option value="256GB">256GB</option>
+        <option value="512GB">512GB</option>
+      </select>
+
+      <label for="bateria">A bateria foi trocada ou possui peças recondicionadas?</label>
+      <select id="bateria" name="bateria" required>
+        <option value="">Selecione</option>
+        <option value="original">Não, original</option>
+        <option value="trocada">Sim, trocada/recondicionada</option>
+      </select>
+
+      <label for="contato">Seu WhatsApp</label>
+      <input type="tel" id="contato" name="contato" required placeholder="55 (21) 98765-4321">
+
+      <button type="submit" class="btn-buy">Enviar Avaliação</button>
+    </form>
+    <p id="aviso" style="color:red; display:none;"></p>
+  </div>
 </section>
 
 <a class="wpp-float" href="https://wa.me/5521967296969" target="_blank">
@@ -470,28 +462,53 @@
 </a>
 
 <footer>
-  <p>© 2026 Power Tec • Maricá - RJ • <a href="garantia.html" style="color: var(--gold)">Garantia</a></p>
+  <p>© 2026 Power Tec • Maricá - RJ</p>
 </footer>
 
 <script>
-  // ================== FILTRO ==================
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const sections = document.querySelectorAll('[data-section]');
+  // FILTROS
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const sections = document.querySelectorAll(".grid");
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
       const filter = btn.dataset.filter;
-      sections.forEach(sec => {
-        if(filter === 'all' || sec.dataset.section === filter){
-          sec.style.display = 'grid';
-        } else {
-          sec.style.display = 'none';
-        }
+      sections.forEach(section => {
+        if(filter === "all") section.style.display = "grid";
+        else if(section.dataset.section === filter) section.style.display = "grid";
+        else section.style.display = "none";
       });
     });
   });
+
+  // FORMULÁRIO DE AVALIAÇÃO
+  document.getElementById("avaliacaoForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const modelo = document.getElementById("modelo").value;
+    const cor = document.getElementById("cor").value;
+    const memoria = document.getElementById("memoria").value;
+    const bateria = document.getElementById("bateria").value;
+    const contato = document.getElementById("contato").value;
+    const aviso = document.getElementById("aviso");
+
+    if(bateria === "trocada"){
+      aviso.style.display = "block";
+      aviso.innerText = "Não aceitamos iPhones com bateria ou peças trocadas/recondicionadas.";
+      return;
+    } else {
+      aviso.style.display = "none";
+    }
+
+    const mensagem = `Olá! Gostaria de avaliar meu iPhone como entrada.\n\nModelo: ${modelo}\nCor: ${cor}\nMemória: ${memoria}\nBateria: ${bateria}\nContato: ${contato}`;
+    const url = `https://wa.me/5521967296969?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, "_blank");
+  });
 </script>
+
 </body>
 </html>
+
+
