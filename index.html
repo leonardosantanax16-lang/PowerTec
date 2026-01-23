@@ -2,459 +2,96 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Power Tec | iPhones Lacrados e Seminovos</title>
+<title>Power Tec | iPhones Premium</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Power Tec - iPhones lacrados e seminovos com garantia. Há 7 anos no mercado.">
-<meta name="keywords" content="iPhone lacrado, iPhone seminovo, Power Tec, Apple, Maricá">
-<meta name="author" content="Power Tec">
+<meta name="description" content="Power Tec - iPhones premium com procedência e garantia">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
+<header class="hero">
   <h1>Power <span>Tec</span></h1>
-  <p>Há 7 anos no mercado • iPhones com procedência e garantia</p>
-  <div class="social">
-    <a href="https://wa.me/5521967296969" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://instagram.com/_powertec/" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
+  <p>iPhones premium • Procedência • Garantia</p>
+  <a href="#tradein" class="btn-main">Avaliar meu iPhone</a>
 </header>
 
-<!-- FILTROS -->
-<div class="filters">
-  <button class="filter-btn active" data-filter="all">Todos</button>
-  <button class="filter-btn" data-filter="lacrado">Lacrados</button>
-  <button class="filter-btn" data-filter="seminovo">Seminovos</button>
-</div>
-
-<!-- ================= LACRADOS ================= -->
-<section class="grid" data-section="lacrado">
-  <h2>Lacrados <span>• Garantia Apple 1 Ano</span></h2>
-
-  <div class="card lacrado">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3 class="modelo">iPhone 13 128GB</h3>
-    <p class="price">R$3.390 à vista 💵</p>
-    <p class="installments">12x 💳 R$328,64<br>18x 💳 R$228,79</p>
-    <button class="btn-buy">Comprar</button>
-  </div>
-
-  <div class="card lacrado">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3 class="modelo">iPhone 14 128GB</h3>
-    <p class="price">R$3.990 à vista 💵</p>
-    <p class="installments">12x 💳 R$385,14<br>18x 💳 R$268,12</p>
-    <button class="btn-buy">Comprar</button>
-  </div>
-
-  <div class="card lacrado">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3 class="modelo">iPhone 15 128GB</h3>
-    <p class="price">R$4.390 à vista 💵</p>
-    <p class="installments">12x 💳 R$422,81<br>18x 💳 R$294,34</p>
-    <button class="btn-buy">Comprar</button>
-  </div>
-
-  <div class="card lacrado">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3 class="modelo">iPhone 16 128GB</h3>
-    <p class="price">R$5.090 à vista 💵</p>
-    <p class="installments">12x 💳 R$488,73<br>18x 💳 R$340,23</p>
-    <button class="btn-buy">Comprar</button>
-  </div>
-
-  <div class="card lacrado">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3 class="modelo">iPhone 16 256GB</h3>
-    <p class="price">R$5.790 à vista 💵</p>
-    <p class="installments">12x 💳 R$554,64<br>18x 💳 R$386,12</p>
-    <button class="btn-buy">Comprar</button>
-  </div>
-
-  <div class="card lacrado">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3 class="modelo">iPhone 17 256GB</h3>
-    <p class="price">R$6.890 à vista 💵</p>
-    <p class="installments">12x 💳 R$658,23<br>18x 💳 R$458,23</p>
-    <button class="btn-buy">Comprar</button>
-  </div>
-
-  <div class="card lacrado">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3 class="modelo">iPhone 17 Pro 256GB</h3>
-    <p class="price">R$8.690 à vista 💵</p>
-    <p class="installments">12x 💳 R$827,73<br>18x 💳 R$576,23</p>
-    <button class="btn-buy">Comprar</button>
-  </div>
-
-  <div class="card lacrado">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3 class="modelo">iPhone 17 Pro Max 256GB</h3>
-    <p class="price">R$9.790 à vista 💵</p>
-    <p class="installments">12x 💳 R$931,31<br>18x 💳 R$648,34</p>
-    <button class="btn-buy">Comprar</button>
-  </div>
+<section class="filters">
+  <button class="filter-btn active">Todos</button>
+  <button class="filter-btn">Lacrados</button>
+  <button class="filter-btn">Seminovos</button>
 </section>
 
+<section class="grid reveal">
+  <h2>Lacrados <span>Garantia Apple 1 ano</span></h2>
 
-
-  <!-- ================== SEMINOVOS ================== -->
-<section class="grid" data-section="seminovo">
-  <h2>Seminovos <span>ATUALIZADO </span></h2>
- 
-
-  <!-- iPhone 11 -->
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 11 64GB</h3>
-    <p class="price">R$ 1.490 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$149,73<br>ou 18x 💳 R$104,23</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 11 128GB</h3>
-    <p class="price">R$ 1.690 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$168,56<br>ou 18x 💳 R$117,34</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 11 Pro 64GB</h3>
-    <p class="price">R$ 1.690 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$168,56<br>ou 18x 💳 R$117,34</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 11 Pro 256GB</h3>
-    <p class="price">R$ 1.990 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$196,81<br>ou 18x 💳 R$137,01</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 11 Pro Max 64GB</h3>
-    <p class="price">R$ 2.090 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$206,23<br>ou 18x 💳 R$143,57</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 11 Pro Max 256GB</h3>
-    <p class="price">R$ 2.290 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$225,06<br>ou 18x 💳 R$156,68</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <!-- iPhone 12 -->
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 12 64GB</h3>
-    <p class="price">R$ 1.990 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$206,23<br>ou 18x 💳 R$143,57</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 12 128GB</h3>
-    <p class="price">R$ 2.190 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$215,64<br>ou 18x 💳 R$150,12</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 12 Pro 128GB</h3>
-    <p class="price">R$ 2.490 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$243,89<br>ou 18x 💳 R$169,79</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 12 Pro 256GB</h3>
-    <p class="price">R$ 2.790 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$272,14<br>ou 18x 💳 R$189,46</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 12 Pro Max 128GB</h3>
-    <p class="price">R$ 2.990 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$300,39<br>ou 18x 💳 R$209,12</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 12 Pro Max 256GB</h3>
-    <p class="price">R$ 3.090 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$300,39<br>ou 18x 💳 R$209,12</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <!-- iPhone 13 -->
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 13 128GB</h3>
-    <p class="price">R$ 2.490 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$243,89<br>ou 18x 💳 R$169,79</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 13 Pro 128GB</h3>
-    <p class="price">R$ 3.190 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$309,81<br>ou 18x 💳 R$215,68</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 13 Pro 256GB</h3>
-    <p class="price">R$ 3.390 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$328,64<br>ou 18x 💳 R$228,79</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 13 Pro Max 128GB</h3>
-    <p class="price">R$ 3.590 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$347,48<br>ou 18x 💳 R$241,90</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 13 Pro Max 256GB</h3>
-    <p class="price">R$ 3.890 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$375,73<br>ou 18x 💳 R$261,57</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <!-- iPhone 14 -->
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 14 128GB</h3>
-    <p class="price">R$ 2.890 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$281,56<br>ou 18x 💳 R$196,01</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 14 Pro 128GB</h3>
-    <p class="price">R$ 3.890 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$375,73<br>ou 18x 💳 R$261,57</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 14 Pro 256GB</h3>
-    <p class="price">R$ 4.090 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$394,56<br>ou 18x 💳 R$274,68</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 14 Pro Max 128GB</h3>
-    <p class="price">R$ 4.390 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$422,81<br>ou 18x 💳 R$294,34</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 14 Pro Max 256GB</h3>
-    <p class="price">R$ 4.590 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$441,64<br>ou 18x 💳 R$307,46</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <!-- iPhone 15 -->
-  <div class="card seminovo">
+  <div class="card">
     <i class="fab fa-apple apple-icon"></i>
     <h3>iPhone 15 128GB</h3>
-    <p class="price">R$ 3.790 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$366,31<br>ou 18x 💳 R$255,01</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
+    <p class="price">R$ 4.390</p>
+    <p class="installments">até 18x no cartão</p>
+    <button class="btn-buy">Comprar</button>
   </div>
 
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 15 Pro 128GB</h3>
-    <p class="price">R$ 4.790 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$460,48<br>ou 18x 💳 R$320,57</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
+  <div class="card">
     <i class="fab fa-apple apple-icon"></i>
     <h3>iPhone 15 Pro 256GB</h3>
-    <p class="price">R$ 4.990 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$479,31<br>ou 18x 💳 R$333,68</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
+    <p class="price">R$ 4.990</p>
+    <p class="installments">até 18x no cartão</p>
+    <button class="btn-buy">Comprar</button>
   </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 15 Pro 512GB</h3>
-    <p class="price">R$ 5.290 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$507,56<br>ou 18x 💳 R$353,34</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 15 Pro Max 256GB</h3>
-    <p class="price">R$ 5.190 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$498,14<br>ou 18x 💳 R$346,79</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 15 Pro Max 512GB</h3>
-    <p class="price">R$ 5.590 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$535,81<br>ou 18x 💳 R$373,01</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <!-- iPhone 16 -->
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 16 128GB</h3>
-    <p class="price">R$ 4.390 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$422,81<br>ou 18x 💳 R$294,34</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 16 Pro 128GB</h3>
-    <p class="price">R$ 6.190 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$592,31<br>ou 18x 💳 R$412,34</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 16 Pro Max 256GB</h3>
-    <p class="price">R$ 6.490 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$620,56<br>ou 18x 💳 R$432,01</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
-  <div class="card seminovo">
-    <i class="fab fa-apple apple-icon"></i>
-    <h3>iPhone 16 Pro Max 512GB</h3>
-    <p class="price">R$ 6.990 à vista 💵</p>
-    <p class="installments">ou 12x 💳 R$667,64<br>ou 18x 💳 R$464,79</p>
-    <a class="btn-buy" href="https://wa.me/5521967296969">Comprar</a>
-  </div>
-
 </section>
-<!-- ================= TRADE-IN ================= -->
-<section class="tradein">
-  <h2>Troque seu iPhone (Aceitamos seminovos como entrada)</h2>
-  <form id="tradeForm">
-    <input type="text" placeholder="Modelo do iPhone" required>
-    <input type="text" placeholder="Memória" required>
-    <input type="text" placeholder="Cor" required>
-    <input type="number" placeholder="Saúde da bateria (%)" required>
-    <label>
-      <input type="checkbox" id="replaced" /> Alguma peça já foi trocada?
+
+<section class="tradein reveal" id="tradein">
+  <h2>Avaliação Premium</h2>
+  <p>Receba uma proposta justa diretamente no WhatsApp</p>
+
+  <form>
+    <input type="text" placeholder="Modelo do seu iPhone" required>
+    <input type="text" placeholder="Modelo desejado" required>
+
+    <div class="trade-row">
+      <input type="text" placeholder="Memória">
+      <input type="text" placeholder="Cor">
+    </div>
+
+    <input type="number" placeholder="Saúde da bateria (%)">
+
+    <label class="trade-check">
+      <input type="checkbox">
+      O aparelho possui alguma peça substituída?
     </label>
-    <button type="submit">Enviar avaliação</button>
+
+    <button type="submit">Solicitar avaliação</button>
   </form>
 </section>
 
-<a class="wpp-float" href="https://wa.me/5521967296969" target="_blank">
+<a class="wpp" href="https://wa.me/5521967296969" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
 
 <footer>
-  <p>© 2026 Power Tec • Maricá - RJ</p>
+© 2026 Power Tec • Maricá - RJ
 </footer>
 
 <script>
-  // FILTROS
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const grids = document.querySelectorAll('.grid');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-
-      grids.forEach(grid => {
-        if(filter === 'all' || grid.dataset.section === filter) {
-          grid.style.display = 'grid';
-        } else {
-          grid.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // APPLE ICON HOVER
-  const appleIcons = document.querySelectorAll('.apple-icon');
-  appleIcons.forEach(icon => {
-    icon.style.transition = 'color 0.3s';
-    icon.addEventListener('mouseenter', () => icon.style.color = '#ff8c00');
-    icon.addEventListener('mouseleave', () => icon.style.color = '#000');
-  });
-
-  // BOTÕES COMPRAR
-  const buyButtons = document.querySelectorAll('.btn-buy');
-  buyButtons.forEach(btn => {
-    btn.addEventListener('click', e => {
-      const card = e.target.closest('.card');
-      const modelo = card.querySelector('.modelo').textContent;
-      const price = card.querySelector('.price').textContent;
-      const link = `https://wa.me/5521967296969?text=Olá!%20Tenho%20interesse%20no%20modelo%20${encodeURIComponent(modelo)}%20com%20preço%20de%20${encodeURIComponent(price)}`;
-      window.open(link, '_blank');
-    });
-  });
-
-  // TRADE-IN FORM
-  const tradeForm = document.getElementById('tradeForm');
-  tradeForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const modelo = tradeForm[0].value;
-    const memoria = tradeForm[1].value;
-    const cor = tradeForm[2].value;
-    const bateria = tradeForm[3].value;
-    const trocada = document.getElementById('replaced').checked;
-
-    if(trocada){
-      alert("Não aceitamos iPhones com peças trocadas (recondicionados).");
-      return;
+/* animação ao rolar */
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('active');
     }
-
-    const msg = `Olá!%20Quero%20avaliar%20meu%20iPhone%20como%20entrada:%0AModelo:%20${encodeURIComponent(modelo)}%0AMemória:%20${encodeURIComponent(memoria)}%0ACor:%20${encodeURIComponent(cor)}%0ASaúde%20da%20bateria:%20${encodeURIComponent(bateria)}%25`;
-    window.open(`https://wa.me/5521967296969?text=${msg}`, '_blank');
   });
+},{ threshold: 0.15 });
+
+reveals.forEach(r => observer.observe(r));
 </script>
+
 </body>
 </html>
-
